@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 432 288" style="enable-background:new 0 0 432 288;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'Roboto-Light';}
+	.st1{font-size:10px;}
+	.st2{fill:#F7F7F7;}
+	.st3{fill:#FFD100;}
+	.st4{fill:#FF3872;}
+	.st5{fill:#515151;}
+	.st6{font-family:'ProximaNova-Bold';}
+	.st7{font-size:14px;}
+	.st8{letter-spacing:32;}
+</style>
+<text transform="matrix(1 0 0 1 307 265.5)" class="st0 st1">Lorem ipsum</text>
+<g>
+	<rect x="1.2" y="0" class="st2" width="432" height="288"/>
+	<g>
+		
+			<image style="overflow:visible;" width="1147" height="780" xlink:href="1ECC3499.png"  transform="matrix(0.24 0 0 0.24 2.3031 69.8809)">
+		</image>
+	</g>
+	<g>
+		
+			<image style="overflow:visible;" width="1146" height="780" xlink:href="1ECC3488.png"  transform="matrix(0.24 0 0 0.24 142.7031 69.8809)">
+		</image>
+	</g>
+	<g>
+		<g>
+			<g>
+				<defs>
+					<path id="SVGID_1_" d="M128.4,120.5v0.3c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6v-0.3H128.4z"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_2_);">
+					
+						<image style="overflow:visible;" width="14" height="32" xlink:href="1ECC3489.png"  transform="matrix(0.24 0 0 0.24 125.1831 119.8009)">
+					</image>
+				</g>
+			</g>
+			
+				<image style="overflow:visible;" width="1026" height="659" xlink:href="1ECC348A.png"  transform="matrix(0.24 0 0 0.24 22.4631 78.7609)">
+			</image>
+			<g>
+				<defs>
+					<path id="SVGID_3_" d="M268.6,120.5v0.3c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6v-0.3H268.6z"/>
+				</defs>
+				<clipPath id="SVGID_4_">
+					<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_4_);">
+					
+						<image style="overflow:visible;" width="14" height="32" xlink:href="1ECC348B.png"  transform="matrix(0.24 0 0 0.24 265.3431 119.8009)">
+					</image>
+				</g>
+			</g>
+		</g>
+		<g>
+			<path class="st3" d="M132.9,120.6c0,3.3-2.7,6-6,6c-3.3,0-6-2.7-6-6c0-3.3,2.7-6,6-6C130.2,114.5,132.9,117.2,132.9,120.6z"/>
+		</g>
+		<g>
+			<path class="st4" d="M261,120.6c0,3.3,2.7,6,6,6c3.3,0,6-2.7,6-6c0-3.3-2.7-6-6-6C263.7,114.5,261,117.2,261,120.6z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<g>
+				<defs>
+					<path id="SVGID_5_" d="M303,195.2v-0.3c0-0.9,0.7-1.6,1.6-1.6c0.9,0,1.6,0.7,1.6,1.6v0.3H303z"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_6_);">
+					
+						<image style="overflow:visible;" width="14" height="32" xlink:href="1ECC348C.png"  transform="matrix(0.24 0 0 0.24 303.0231 188.2009)">
+					</image>
+				</g>
+			</g>
+			
+				<image style="overflow:visible;" width="1026" height="659" xlink:href="1ECC348F.png"  transform="matrix(0.24 0 0 0.24 162.6231 78.7609)">
+			</image>
+			<g>
+				<defs>
+					<path id="SVGID_7_" d="M162.8,195.2v-0.3c0-0.9,0.7-1.6,1.6-1.6c0.9,0,1.6,0.7,1.6,1.6v0.3H162.8z"/>
+				</defs>
+				<clipPath id="SVGID_8_">
+					<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_8_);">
+					
+						<image style="overflow:visible;" width="15" height="32" xlink:href="1ECC3486.png"  transform="matrix(0.24 0 0 0.24 162.6231 188.2009)">
+					</image>
+				</g>
+			</g>
+		</g>
+		<g>
+			<path class="st3" d="M298.6,195.2c0-3.3,2.7-6,6-6c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6C301.3,201.2,298.6,198.5,298.6,195.2z"/>
+		</g>
+		<g>
+			<path class="st4" d="M170.5,195.2c0-3.3-2.7-6-6-6s-6,2.7-6,6c0,3.3,2.7,6,6,6S170.5,198.5,170.5,195.2z"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 42 43.7301)" class="st5 st6 st7">CLOUD COMPUTING DELIVERY METHODS EXAMPLES</text>
+<text transform="matrix(1 0 0 1 53.3563 70.0909)" class="st5 st6 st7">SaaS</text>
+<text transform="matrix(1 0 0 1 38.3563 116.0141)"><tspan x="0" y="0" class="st5 st0 st1">- Salesforce</tspan><tspan x="0" y="12" class="st5 st0 st1">- Dropbox</tspan><tspan x="0" y="24" class="st5 st0 st1">- Mailchimp</tspan><tspan x="0" y="36" class="st5 st0 st1">- Zoho</tspan><tspan x="0" y="48" class="st5 st0 st1">- Freshworks</tspan><tspan x="0" y="60" class="st5 st0 st1">- Slack </tspan><tspan x="0" y="72" class="st5 st0 st1">- Hubspot</tspan><tspan x="0" y="84" class="st5 st0 st1">- G Suite</tspan><tspan x="0" y="96" class="st5 st0 st1">- MS Office Suites</tspan></text>
+<text transform="matrix(1 0 0 1 176.8563 115.5352)"><tspan x="0" y="0" class="st5 st0 st1">- AWS Beanstalk</tspan><tspan x="0" y="12" class="st5 st0 st1">- Windows Azure</tspan><tspan x="0" y="24" class="st5 st0 st1">- Force.com</tspan><tspan x="0" y="36" class="st5 st0 st1">- Google App </tspan><tspan x="0" y="48" class="st5 st0 st1">   Engine</tspan><tspan x="0" y="60" class="st5 st0 st1">- Zoho Creator</tspan><tspan x="0" y="72" class="st5 st0 st1">- Openshift</tspan><tspan x="0" y="84" class="st5 st0 st1">- Heroku</tspan><tspan x="0" y="96" class="st5 st0 st1">- SAP</tspan></text>
+<text transform="matrix(1 0 0 1 320.3562 116.014)"><tspan x="0" y="0" class="st5 st0 st1">- AWS EC2</tspan><tspan x="0" y="12" class="st5 st0 st1">- Google Compute </tspan><tspan x="0" y="24" class="st5 st0 st1">   Engine</tspan><tspan x="36.9" y="24" class="st5 st0 st1 st8">	</tspan><tspan x="0" y="36" class="st5 st0 st1">- Openstack</tspan><tspan x="0" y="48" class="st5 st0 st1">- Digital Ocean</tspan><tspan x="0" y="60" class="st5 st0 st1">- IBM Cloud</tspan><tspan x="0" y="72" class="st5 st0 st1">- Google Cloud </tspan><tspan x="0" y="84" class="st5 st0 st1">   Platform</tspan><tspan x="0" y="96" class="st5 st0 st1">- Oracle</tspan></text>
+<text transform="matrix(1 0 0 1 199.4717 70.091)" class="st5 st6 st7">PaaS</text>
+<text transform="matrix(1 0 0 1 344.9717 70.091)" class="st5 st6 st7">IaaS</text>
+<text transform="matrix(1 0 0 1 347.5 272)" class="st0 st1">Sixty One Steps</text>
+</svg>

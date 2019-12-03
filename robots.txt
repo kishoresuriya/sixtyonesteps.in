@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /graphics/
+Sitemap: https://www.sixtyonesteps.in/sitemap.xml

@@ -1,0 +1,35 @@
+{
+  "name": "Sixty-1-Steps",
+  "version": "1.0.0",
+  "description": "Sixty One Steps is a group of individuals who value evolving and growing better every day. We do not forget our roots: where we stand, is because of where we come from. Thus, our young team is updated with trending themes while staying rooted in our traditional thoughts as well.We Offer,",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunKumar-61Steps/Sixty-1-Steps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArunKumar-61Steps/Sixty-1-Steps/issues"
+  },
+  "homepage": "https://github.com/ArunKumar-61Steps/Sixty-1-Steps#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "gulp-uncss": "^1.0.6"
+  },
+  "dependencies": {
+    "puppeteer": "^2.0.0",
+    "puppeteer-core": "^2.0.0"
+  }
+}
