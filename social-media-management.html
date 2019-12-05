@@ -14,87 +14,118 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
     <meta name="theme-color" content="#000">
-    <link href="dist/css/social-media-management.css" rel="stylesheet">
+    <!-- <link href="dist/css/social-media-management.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
+    <link href="assets/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/lib/lightbox2/css/lightbox.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet">
+    
+
     <style>
-@media (min-width: 576px) {
-.space-sm-1,
-  .space-top-sm-1 {
-    padding-top: 2rem !important;
-  }
-  .space-sm-1,
-  .space-bottom-sm-1 {
-    padding-bottom: 2rem !important;
-  }
-
-  .order-sm-1 {
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .order-sm-2 {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .order-sm-3 {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-
-}
+@media (min-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
 
-/*------------------------------------
-  Paging Modern
-------------------------------------*/
-.u-paging-modern .u-paging-modern__arrow-icon-prev, .u-paging-modern .u-paging-modern__arrow-icon-next {
-  transition: 0.3s;
-}
 
-.u-paging-modern .u-paging-modern__arrow-icon-prev {
-  margin-right: 1rem;
-}
+        @media (max-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
-.u-paging-modern .u-paging-modern__arrow-icon-next {
-  margin-left: 1rem;
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev,
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            transition: 0.3s
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev {
+            margin-right: 1rem
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            margin-left: 1rem
+        }
 
-.u-paging-modern-view-all {
-  color: #fff;
-  text-align: center;
-  background-color: #ffc107;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
+            -webkit-transform: translateX(-8px);
+            transform: translateX(-8px)
+        }
 
-.u-paging-modern-view-all__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  transition: 0.3s;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px)
+        }
 
-.u-paging-modern-view-all:hover {
-  color: #fff;
-}
+        .u-paging-modern-view-all {
+            color: #fff;
+            text-align: center;
+            background-color: #ffc107
+        }
 
-.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
+        .u-paging-modern-view-all__icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            transition: 0.3s
+        }
 
+        .u-paging-modern-view-all:hover {
+            color: #fff
+        }
 
-.font-weight-semi-bold {
-  font-weight: 600 !important;
-}
+        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px)
+        }
+
+        .font-weight-semi-bold {
+            font-weight: 600
+        }
 </style>
 
 
@@ -467,6 +498,17 @@
     <link rel="preconnect" href="https://s3.amazonaws.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://cdn.ampproject.org">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111344734-2');
+</script>
+
 </head>
 
 <body class="has-sidemenu has-sidemenu-left overflow-hidden-x">
@@ -650,8 +692,8 @@
 
 
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10">
+            <div class="row mx-auto">
+                <div class="col-lg-10 mx-auto">
                     <h2 class="text-center mt-5">Social Media Is Your Digital Handshake </h2>
 
             
@@ -780,128 +822,7 @@
              </div>
         </section>
 
-        <!-- 
-        <section class="py-0" id="digital-features">
-
-            <div class="container-fluid">
-                <div class="row align-items-center  py-md-8 py-lg-0">
-                    <div class="col-lg-4 px-lg-5 py-4 py-md-7">
-                        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                            <amp-img class="mr-3" src="assets/img/social/Icons/12.svg" alt="icon" width="50" height="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></amp-img>
-                            <div class="media-body ">
-                                <div class="overflow-hidden">
-                                    <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>Benefits of Social Media Marketing</h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                      <ul class="style-check">
-                <li class="mt-3">Accessible to people who are interested in the products or services</li>
-                <li class="mt-2">Does not require heavy budgeting to put forward campaigns</li>
-                <li class="mt-2">Earned media - reviews and comments add credibility to brand.</li>
-              </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-lg-5 border-lg-left border-lg-right border-300 py-4 py-md-7 smd">
-                        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-                            <amp-img class="mr-3" src="assets/img/social/Icons/09.svg" alt="icon" width="50" height="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></amp-img>
-                            <div class="media-body ">
-                                <div class="overflow-hidden">
-                                    <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>Creating Brand Awareness </h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                        <ul class="style-check">
-                 <li class="mt-3">Define brand highlights</li>
-                <li class="mt-2">Assures brand awareness and brand recall</li>
-                <li class="mt-2">Interact with customers and build relationships</li>
-                 <li class="mt-2">Build virtual communities - Let consumers express their wants, needs and values.</li>
-              </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-lg-5 mt-2 py-4 py-md-7 smd">
-                        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
-                            <amp-img class="mr-3" src="assets/img/social/Icons/11.svg" alt="icon" width="50" height="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></amp-img>
-                            <div class="media-body ">
-                                <div class="overflow-hidden">
-                                    <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>Understanding the User | audience  </h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                         <ul class="style-check">
-                 <li class="mt-3">Target your particular audience user groups</li>
-                <li class="mt-2">Segment based on your intended end-users</li>
-                <li class="mt-2">Different user groups look for different types of content</li>
-                  <li class="mt-2">Generate organic growth by delivering suitable content</li>
-              </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="row align-items-center py-lg-0">
-                    <div class="col-lg-4 px-lg-5">
-                        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                            <amp-img class="mr-3" src="assets/img/social/Icons/01.svg" alt="icon" width="50" height="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></amp-img>
-                            <div class="media-body">
-                                <div class="overflow-hidden">
-                                    <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>Content Management | Optimisation | Paid Ads </h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                         <ul class="style-check">
-                <li class="mt-3">We, monitor, optimise, manage paid ads, manage messages & comments.</li>
-                <li class="mt-2">Proper content marketing plan in place leads to Organic growth</li>
-                <li class="mt-2">Based on their areas of interest, identify the content that can reach out to the right audience.</li>
-              </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-lg-5 border-lg-left border-lg-right border-300 py-4 ">
-                        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-                            <amp-img class="mr-3" src="assets/img/social/Icons/10.svg" alt="icon" width="50" height="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></amp-img>
-                            <div class="media-body mt-2">
-                                <div class="overflow-hidden">
-                                    <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>Brand and Competitor Research </h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                      <ul class="style-check">
-                <li class="mt-3">As social media page managers for your brand, we help your brand become identifiable to your audience</li>
-                <li class="mt-2">We help answer the question, "Who Are You?"</li>
-                <li class="mt-2">We analyse and understand brand competition to create a unique digital space for your brand</li>
-              </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 px-lg-5">
-                        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
-                            <amp-img class="mr-3" src="assets/img/social/Icons/03.svg" alt="icon" width="50" height="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></amp-img>
-                            <div class="media-body mt-2">
-                                <div class="overflow-hidden">
-                                    <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>Analytics and Data </h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                    <ul class="style-check">
-               <li class="mt-3">Analytics provides data about the trends of the users of social media.</li>
-                <li class="mt-2">User behaviour provides us with vital signs - It's crucial to understand buying signals.</li>
-                <li class="mt-2">Content planning based on analytics of user engagement likes, comments and shares</li>
-              </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <hr style="margin-top: -2px">
-            </div>
-          
-
-        </section>
-     -->
-
-
        
-
 
 
         <!-- ============================================-->
@@ -943,7 +864,7 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-12 mb-5 mb-md-7 text-center">
-                                    <h2 class="fs-3 fs-sm-4"><span class="text-underline">Action leading to a conversion</span></h2>
+                                    <h2 class=" ">Action leading to a conversion</h2>
                                 </div>
                                 <div class="col-lg-5 pr-lg-4  mt-5 mb-4">
                                     <div class="media" data-zanim-timeline="{}" data-zanim-trigger="scroll">
@@ -1053,7 +974,7 @@
                         <div class="container">
                             <div class="row justify-content-center text-center">
                                 <div class="col-lg-9 col-xl-8" >
-                                    <h2 class="text-underline mb-3 ">How does content marketing work?</h2>
+                                    <h2 class=" mb-3 ">How does content marketing work?</h2>
                                     <p class="lead text-500 font-italic text-black">As we said before, content marketing is the process of having credible, up-to-date and useful content that is omnipresent in your brand. Content marketing is a cycle of answers and questions. It gives the answers that your audience looks for while giving them the drive to seek out more. Your brand comes in at this moment and provides the answers to the questions that your content marketing arises in your intended users thus, driving sales for your products.</p>
                                 </div>
                             </div>
@@ -1133,47 +1054,18 @@
 
      <section class="bg-light">
 
-        <!--
-            <div class="container-fluid px-lg-0">
-                   <div class="row mx-auto ml-auto">
-      <div class="col-lg-6 mx-auto ml-auto">
-
-                            <div class="text-sans-serif">
-                                <h3 class=" font-weight-normal text-center">Worth <span class='font-weight-black'>it</span> </h3>
-
-                                <p class="mb-0 mt-5">Being a full-service digital marketing agency we can confidently offer our services that will help you tell and sell your stories. Content is something that gives and influences the ideas of people. Content marketing may sound hard, but it is well worth the effort. This doesn’t happen over a post or a day. Content marketing works by subtly nudging your target audience with a stream of ideas that emphasis on the importance of your brand in their lives. </p>
-                            </div>
-           
-                        <div class="justify-content-center" style="display: flex;text-align: center;">
-                            <div class="col-lg-4 mt-5">
-                                <a href="email-marketing.html" class="btn bg-dark btn-sm" data-zanim-xs='{"delay":0.6,"animation": "slide-left"}' data-zanim-trigger="scroll" style="color: white;">PREV</a>
-
-                            </div>
-                            <div class="col-lg-4">
-                                <a class="btn btn-danger btn-sm mt-5 " href="about.html#contactus" data-zanim-xs='{"delay":0.6,"animation": "slide-left"}' data-zanim-trigger="scroll">Contact </a>
-                            </div>
-                            <div class="col-lg-4 mt-5">
-                                <a href="pay-per-click-advertisement.html" class="btn bg-dark btn-sm" data-zanim-xs='{"delay":0.6,"animation": "slide-left"}' data-zanim-trigger="scroll" style="color: white;">NEXT</a>
-                            </div>
-                        </div>
-                  
-
-                    </div>
-                </div>
-            </div>
-
-        -->
+       
 
 
 
 
-<div class="container mb-5 mt-5">
+<div class="container">
 
             <!-- Paging v1 Section -->
 <nav class="clearfix">
   <div class="row no-gutters mx-auto">
     
-    <a class="col-sm-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="email-marketing.html" style="background-image: url(../../assets/img/1920x800/img14.jpg); background-color: #1e2022; text-decoration: none;">
+    <a class="col-sm-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="email-marketing.html" style=" background-color: #1e2022; text-decoration: none;">
       <!-- Paging v1 -->
       <div class="px-7">
         <span class="" style="color: #ea9a00;">Prev</span>
@@ -1194,7 +1086,7 @@
       <!-- End Paging v1 -->
     </a>
 
-    <a class="col-sm-4 order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="pay-per-click-advertisement.html" style="background-image: url(../../assets/img/1920x800/img15.jpg); background-color: #1e2022; text-decoration: none;">
+    <a class="col-sm-4 order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="pay-per-click-advertisement.html" style=" background-color: #1e2022; text-decoration: none;">
       <!-- Paging v1 -->
       <div class="px-7">
         <span class="" style="color: #ea9a00;">Next</span>
@@ -1211,70 +1103,7 @@
 </nav>
 </div>
 
-<!--
-         <div class="row mx-auto">
 
-        <main class="col-md-9 col-xl-10 px-lg-10 pt-md-11  ml-md-auto mx-auto">
-    
-
-        
-        <div id="page-link-1" class="hs-docs-content-divider">
-         
-
-         
-          <div class="tab-wrapper">
-           
-
-            
-              
-                <nav class="clearfix mx-auto">
-                  <div class="row no-gutters mx-auto">
-                    <a class="col-sm-4 mx-auto order-sm-1 u-paging-modern bg-img-hero space-1 space-sm-1 text-right" href="email-marketing.html" style="background-image: url(); background-color: #1e2022;">
-                    
-                      <div class="px-7">
-                        <span  style="color: #ea9a00;">Prev</span>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <span class="fas fa-arrow-left u-paging-modern__arrow-icon-prev" style="color: #ea9a00;"></span>
-                          <h4 class="text-white font-weight-semi-bold mb-0"> Email Marketing</h4>
-                        </div>
-                      </div>
-                      
-                    </a>
-
-
-                    <a class="col-sm-4 mx-auto order-sm-2 u-paging-modern-view-all space-1 space-sm-1" href="about.html#contactus" style="padding-top: 2rem; background-color: #ea9a00;">
-                     
-                      <h6></h6>
-                      <h6 class="btn btn-outline-dark mx-auto text-center" > Contact Us</h6>
-                      
-                    </a>
-
-
-                    <a class="col-sm-4 mx-auto order-sm-3 u-paging-modern bg-img-hero space-1 space-sm-1" href="pay-per-click-advertisement.html" style="background-image: url(); background-color: #1e2022;">
-                    
-                      <div class="px-7" style="margin:auto;">
-                        <span style="color: #ea9a00;">Next</span>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <h4 class="text-white font-weight-semi-bold mb-0">Pay Per Click</h4>
-                          <span class="fas fa-arrow-right u-paging-modern__arrow-icon-next" style="color: #ea9a00;" ></span>
-                        </div>
-                      </div>
-                    
-                    </a>
-
-                    
-                  </div>
-                </nav>
-               
-             
-          </div>
-        
-        </div>
-        
-      </main>
-  </div>
-
--->
 </section>
 
         <!-- ============================================-->

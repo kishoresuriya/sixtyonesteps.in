@@ -31,83 +31,102 @@
     
 
 <style>
-@media (min-width: 576px) {
-.space-sm-1,
-  .space-top-sm-1 {
-    padding-top: 2rem !important;
-  }
-  .space-sm-1,
-  .space-bottom-sm-1 {
-    padding-bottom: 2rem !important;
-  }
-
-  .order-sm-1 {
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .order-sm-2 {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .order-sm-3 {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-
-}
+@media (min-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
 
-/*------------------------------------
-  Paging Modern
-------------------------------------*/
-.u-paging-modern .u-paging-modern__arrow-icon-prev, .u-paging-modern .u-paging-modern__arrow-icon-next {
-  transition: 0.3s;
-}
 
-.u-paging-modern .u-paging-modern__arrow-icon-prev {
-  margin-right: 1rem;
-}
+        @media (max-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
-.u-paging-modern .u-paging-modern__arrow-icon-next {
-  margin-left: 1rem;
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev,
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            transition: 0.3s
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev {
+            margin-right: 1rem
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            margin-left: 1rem
+        }
 
-.u-paging-modern-view-all {
-  color: #fff;
-  text-align: center;
-  background-color: #ffc107;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
+            -webkit-transform: translateX(-8px);
+            transform: translateX(-8px)
+        }
 
-.u-paging-modern-view-all__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  transition: 0.3s;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px)
+        }
 
-.u-paging-modern-view-all:hover {
-  color: #fff;
-}
+        .u-paging-modern-view-all {
+            color: #fff;
+            text-align: center;
+            background-color: #ffc107
+        }
 
-.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
+        .u-paging-modern-view-all__icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            transition: 0.3s
+        }
 
+        .u-paging-modern-view-all:hover {
+            color: #fff
+        }
 
-.font-weight-semi-bold {
-  font-weight: 600 !important;
-}
+        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px)
+        }
+
+        .font-weight-semi-bold {
+            font-weight: 600
+        }
 </style>
 
 
@@ -491,6 +510,17 @@
     <link rel="preconnect" href="https://s3.amazonaws.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://cdn.ampproject.org">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111344734-2');
+</script>
+
 </head>
 
 <body class="has-sidemenu has-sidemenu-left overflow-hidden-x">
@@ -677,9 +707,9 @@
 
 
         <div class="container">
-            <div class="row">
+            <div class="row mx-auto">
 
-                <div class="col-lg-11 text-center">
+                <div class="col-lg-11 text-center mx-auto">
 
                     <p class="fs-2 text-sans-serif font-weight-normal text-dark text-center">Content is king thus photography is the kingmaker because a picture is worth a thousand words. At Sixty One Steps, we specialize in food photography, in a professional way, for commercial culinary services.We work with the in-house photography services of SOS for the photo shoot. We, however, do not shy away from collaborating with other freelancers and even equipping ourselves with the necessary equipment when required.</p>
                 </div>
@@ -693,7 +723,7 @@
         <div class="container">
             <div class="row justify-content-center text-center mb-2">
                 <div class="col-lg-7">
-                    <h2 class="fs-3 fs-sm-4 text-underline mb-3 mt-5">Portfolio</h2>
+                    <h2 class=" mb-3 mt-5">Portfolio</h2>
 
                 </div>
             </div>

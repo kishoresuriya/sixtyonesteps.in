@@ -28,83 +28,102 @@
     <link href="assets/css/theme.css" rel="stylesheet">
     
 <style>
-@media (min-width: 576px) {
-.space-sm-1,
-  .space-top-sm-1 {
-    padding-top: 2rem !important;
-  }
-  .space-sm-1,
-  .space-bottom-sm-1 {
-    padding-bottom: 2rem !important;
-  }
-
-  .order-sm-1 {
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .order-sm-2 {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .order-sm-3 {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-
-}
+@media (min-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
 
-/*------------------------------------
-  Paging Modern
-------------------------------------*/
-.u-paging-modern .u-paging-modern__arrow-icon-prev, .u-paging-modern .u-paging-modern__arrow-icon-next {
-  transition: 0.3s;
-}
 
-.u-paging-modern .u-paging-modern__arrow-icon-prev {
-  margin-right: 1rem;
-}
+        @media (max-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
-.u-paging-modern .u-paging-modern__arrow-icon-next {
-  margin-left: 1rem;
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev,
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            transition: 0.3s
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev {
+            margin-right: 1rem
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            margin-left: 1rem
+        }
 
-.u-paging-modern-view-all {
-  color: #fff;
-  text-align: center;
-  background-color: #ffc107;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
+            -webkit-transform: translateX(-8px);
+            transform: translateX(-8px)
+        }
 
-.u-paging-modern-view-all__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  transition: 0.3s;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px)
+        }
 
-.u-paging-modern-view-all:hover {
-  color: #fff;
-}
+        .u-paging-modern-view-all {
+            color: #fff;
+            text-align: center;
+            background-color: #ffc107
+        }
 
-.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
+        .u-paging-modern-view-all__icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            transition: 0.3s
+        }
 
+        .u-paging-modern-view-all:hover {
+            color: #fff
+        }
 
-.font-weight-semi-bold {
-  font-weight: 600 !important;
-}
+        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px)
+        }
+
+        .font-weight-semi-bold {
+            font-weight: 600
+        }
 </style>
 
 
@@ -129,6 +148,18 @@
     <link rel="preconnect" href="https://s3.amazonaws.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://salesiq.zoho.com"> 
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111344734-2');
+</script>
+
 </head>
 
 <body class="has-sidemenu has-sidemenu-left overflow-hidden-x">
@@ -312,14 +343,14 @@
          <section class=" bg-light " data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">
 
              <div class="container" style="margin-top: 60px">
-            <div class="row">
-                 <div class="container">
-                <div class="col-lg-11">
+            <div class="row mx-auto">
+                 
+                <div class="col-lg-11 mx-auto">
                     <h2 class="text-center">From Recruitment to Exit Process and Everything In Between </h2>
     
                 <p class="fs-2 text-sans-serif font-weight-normal mt-4 text-dark text-center" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">The HR department acts as the face of the organisation across several domains. Handling such a large number of people and their data can be overwhelming in terms of energy, time and money. By providing the appropriate software and automation, workflow processes such as onboarding, time tracking, appraisal, and attendance management of all employees can be streamlined to help the organisation and the employees achieve goals</p>
                 </div>
-            </div>
+           
             </div>
         </div>
 
@@ -334,7 +365,7 @@
             <div class="container" style="margin-top: 90px">
                 <div class="row justify-content-center">
                     <div class="col-12 mb-5 mb-md-7 text-center">
-                        <h2 class="fs-3 fs-sm-4"><span class="text-underline">A 360-degree HR Solution</span></h2>
+                        <h2 class="">A 360-degree HR Solution</h2>
                         <p class="mt-4" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">
                             The needs of each organisation are different, based on the size of operations, number of employees, nature of work, turn-over, requirements and such. Indeed, there is no “one size fits all” when it comes to The world of HR simply because each brand has a multifaceted personality based on who is viewing it. However, the extent to which efficiency is present is highly dependant on the ease of use and access to the various resources available to an organisation.
                         </p>
@@ -508,7 +539,7 @@
 
         <div class="container">
           <div class="row justify-content-center text-center mb-5">
-             <h2 class="fs-3 fs-sm-4 text-underline mb-4"  style="margin-top: 80px">HR Processes Simplified & Streamlined</h2>
+             <h2 class="mb-4"  style="margin-top: 80px">HR Processes Simplified & Streamlined</h2>
             <div class="col-lg-6">
             
               <hr class="hr-short mt-5 border-300" />

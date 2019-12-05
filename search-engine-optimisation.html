@@ -30,83 +30,102 @@
     
 
 <style>
-@media (min-width: 576px) {
-.space-sm-1,
-  .space-top-sm-1 {
-    padding-top: 2rem !important;
-  }
-  .space-sm-1,
-  .space-bottom-sm-1 {
-    padding-bottom: 2rem !important;
-  }
-
-  .order-sm-1 {
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .order-sm-2 {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .order-sm-3 {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-
-}
+@media (min-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
 
-/*------------------------------------
-  Paging Modern
-------------------------------------*/
-.u-paging-modern .u-paging-modern__arrow-icon-prev, .u-paging-modern .u-paging-modern__arrow-icon-next {
-  transition: 0.3s;
-}
 
-.u-paging-modern .u-paging-modern__arrow-icon-prev {
-  margin-right: 1rem;
-}
+        @media (max-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
-.u-paging-modern .u-paging-modern__arrow-icon-next {
-  margin-left: 1rem;
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev,
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            transition: 0.3s
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev {
+            margin-right: 1rem
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            margin-left: 1rem
+        }
 
-.u-paging-modern-view-all {
-  color: #fff;
-  text-align: center;
-  background-color: #ffc107;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
+            -webkit-transform: translateX(-8px);
+            transform: translateX(-8px)
+        }
 
-.u-paging-modern-view-all__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  transition: 0.3s;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px)
+        }
 
-.u-paging-modern-view-all:hover {
-  color: #fff;
-}
+        .u-paging-modern-view-all {
+            color: #fff;
+            text-align: center;
+            background-color: #ffc107
+        }
 
-.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
+        .u-paging-modern-view-all__icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            transition: 0.3s
+        }
 
+        .u-paging-modern-view-all:hover {
+            color: #fff
+        }
 
-.font-weight-semi-bold {
-  font-weight: 600 !important;
-}
+        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px)
+        }
+
+        .font-weight-semi-bold {
+            font-weight: 600
+        }
 </style>
 
 
@@ -467,6 +486,17 @@
     <link rel="preconnect" href="https://s3.amazonaws.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://cdn.ampproject.org">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111344734-2');
+</script>
+
 </head>
 
 <body class="has-sidemenu has-sidemenu-left overflow-hidden-x">
@@ -652,9 +682,9 @@
 <section class=" bg-light " data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">
 
         <div class="container">
-            <div class="row top2">
+            <div class="row top2 mx-auto">
                
-                <div class="col-lg-11">
+                <div class="col-lg-11 mx-auto">
                     <h4 class="text-center mt-5 font-italic"><q> Google only loves you when everyone else loves you first</q> <br><br>- Wendy Piersall
                     </h4>
 
@@ -674,7 +704,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 mb-5 mb-md-7 text-center">
-                        <h2 class="fs-3 fs-sm-4"><span class="text-underline">How does SEO work?</span></h2>
+                        <h2 class=" ">How does SEO work? </h2>
                     </div>
                     <div class="col-lg-5 pr-lg-4 mb-4">
                         <div class="media" data-zanim-timeline="{}" data-zanim-trigger="scroll">
@@ -782,7 +812,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 mb-7 text-center">
-                        <h2 class="fs-3 fs-sm-4 text-underline mb-3">The relevance of SEO to Users & Service Providers</h2>
+                        <h2 class="  mb-3">The relevance of SEO to Users & Service Providers</h2>
                         <p class="text-500 font-italic  text-black">SEO could help your brand stay ahead of your competitors even against big enterprises. Involving SEO ensures more traffic that translates into more users and thus, value for your time and money. Value for time for your customers and value for money for you.</p>
                     </div>
                 </div>
@@ -854,18 +884,7 @@
                                     We include both inbound and outbound links to other related websites, increasing the credibility of yours. Search engines look at how many links come from relevant sites that point to your Web site, but they also look at internal links on pages. We provide affordable SEO services for SME. </p>
                             </div>
        
-                        <div class="justify-content-center" style="display: flex;text-align: center;margin-bottom: 50px">
-                            <div class="col-lg-4 mt-5">
-                                <a href="custom-app-development.html" class="btn bg-dark btn-sm " style="color: white;">PREV</a>
-
-                            </div>
-                            <div class="col-lg-4">
-                                <a class="btn  btn-sm  btn-danger mt-5 " href="about.html#contactus">Contact</a>
-                            </div>
-                            <div class="col-lg-4 mt-5">
-                                <a href="email-marketing.html" class="btn bg-dark btn-sm" style="color: white;">NEXT</a>
-                            </div>
-                        </div>
+                     
 
             
                     </div>
@@ -879,67 +898,6 @@
 
 
 
-    <!-- ============================================-->
-                <!-- <section> begin ============================--
-                <section class="py-0 mb-5 mt-5" id="default-cta-4">
-
-                    <div class="container">
-                        <div class="row mx-auto justify-content-center align-items-center bg-dark rounded py-6 text-center">
-                            <div class="col-lg-4  mt-1 mb-1">
-
-
-                            <a href="custom-app-development.html" style="text-decoration: none;">
-                                    <div class="d-flex  justify-content-center text-center mx-auto">
-
-
-                                        <a class="btn btn-outline-light btn-sm my-2" href="custom-app-development.html" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll"> &#10229;  Custom Apps </a>
-
-                                    </div>
-
-
-
-                            </a>
-
-
-                        </div>
-                        <div class="col-lg-4 mt-1 mb-1">
-                            <a class="btn btn-light btn-sm" href="about.html#contactus" style="color: black;">GET QUOTE</a>
-                        </div>
-
-
-                        <div class="col-lg-4 mt-1 mb-1">
-
-                            <a href="email-marketing.html" style="text-decoration: none;">
-
-                                <div class="d-flex justify-content-center">
-                                   
-
-
-
-                                            <a class="btn btn-outline-light btn-sm my-2" href="email-marketing.html" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Email Marketing &xrarr;</a>
-
-                                        </div>
-
-
-
-                            </a>
-
-                        </div>
-
-
-                    </div>
-                </div>
-                
-
-        </section>
-
-    -->
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
-
-
-
-
 
 
 
@@ -949,7 +907,7 @@
 <nav class="clearfix">
   <div class="row no-gutters mx-auto">
     
-    <a class="col-sm-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="custom-app-development.html" style="background-image: url(../../assets/img/1920x800/img14.jpg); background-color: #1e2022; text-decoration: none;">
+    <a class="col-sm-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="custom-app-development.html" style=" background-color: #1e2022; text-decoration: none;">
       <!-- Paging v1 -->
       <div class="px-7">
         <span class="" style="color: #ea9a00;">Prev</span>
@@ -970,7 +928,7 @@
       <!-- End Paging v1 -->
     </a>
 
-    <a class="col-sm-4 order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="email-marketing.html" style="background-image: url(../../assets/img/1920x800/img15.jpg); background-color: #1e2022; text-decoration: none;">
+    <a class="col-sm-4 order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="email-marketing.html" style=" background-color: #1e2022; text-decoration: none;">
       <!-- Paging v1 -->
       <div class="px-7">
         <span class="" style="color: #ea9a00;">Next</span>

@@ -30,83 +30,102 @@
     <link href="assets/css/theme.css" rel="stylesheet">
     
 <style>
-@media (min-width: 576px) {
-.space-sm-1,
-  .space-top-sm-1 {
-    padding-top: 2rem !important;
-  }
-  .space-sm-1,
-  .space-bottom-sm-1 {
-    padding-bottom: 2rem !important;
-  }
-
-  .order-sm-1 {
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .order-sm-2 {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .order-sm-3 {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-
-}
+@media (min-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
 
-/*------------------------------------
-  Paging Modern
-------------------------------------*/
-.u-paging-modern .u-paging-modern__arrow-icon-prev, .u-paging-modern .u-paging-modern__arrow-icon-next {
-  transition: 0.3s;
-}
 
-.u-paging-modern .u-paging-modern__arrow-icon-prev {
-  margin-right: 1rem;
-}
+        @media (max-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
 
-.u-paging-modern .u-paging-modern__arrow-icon-next {
-  margin-left: 1rem;
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev,
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            transition: 0.3s
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-prev {
+            margin-right: 1rem
+        }
 
-.u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-}
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            margin-left: 1rem
+        }
 
-.u-paging-modern-view-all {
-  color: #fff;
-  text-align: center;
-  background-color: #ffc107;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
+            -webkit-transform: translateX(-8px);
+            transform: translateX(-8px)
+        }
 
-.u-paging-modern-view-all__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  transition: 0.3s;
-}
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px)
+        }
 
-.u-paging-modern-view-all:hover {
-  color: #fff;
-}
+        .u-paging-modern-view-all {
+            color: #fff;
+            text-align: center;
+            background-color: #ffc107
+        }
 
-.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
+        .u-paging-modern-view-all__icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            transition: 0.3s
+        }
 
+        .u-paging-modern-view-all:hover {
+            color: #fff
+        }
 
-.font-weight-semi-bold {
-  font-weight: 600 !important;
-}
+        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px)
+        }
+
+        .font-weight-semi-bold {
+            font-weight: 600
+        }
 </style>
 
 
@@ -297,6 +316,18 @@
      <link rel="preconnect" href="https://salesiq.zoho.com">
     <link rel="preconnect" href="https://s3.amazonaws.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111344734-2');
+</script>
+
+
 </head>
 
 <body class="has-sidemenu has-sidemenu-left overflow-hidden-x">
@@ -482,12 +513,12 @@
         <section class=" bg-light " data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">
 
         <div class="container mt-5" >
-            <div class="row breakdown">
-              <div class="container" >
-                <div class="col-lg-11">
+            <div class="row breakdown mx-auto">
+              
+                <div class="col-lg-11 mx-auto">
                     <h2 class="text-center">Break Down Complex Messages with Simple Design </h2>
                     <p class="fs-2 text-sans-serif font-weight-normal text-dark text-center mt-4">Graphic design is a vital accessory that is used to communicate ideas along with other forms of visual and verbal communication. Graphic design is instrumental in establishing your brand across popular media: be it offline or online. </p>
-             </div></div>
+             </div>
             </div>
         </div>
 
@@ -548,7 +579,7 @@
 
         <div class="row justify-content-center text-center mb-2 mt-5" >
                 <div class="col-lg-4"></div>
-                   <div class="col-lg-4">  <h2 class="fs-3 fs-sm-4 text-underline mb-3 mt-5">Portfolio</h2>
+                   <div class="col-lg-4">  <h2 class=" mb-3 mt-5">Portfolio</h2>
 
                 </div>
                  <div class="col-lg-4"></div>
@@ -628,14 +659,14 @@
         <div class="border-top border-300" style="margin-top: 100px">
 
             <div class="container" style="margin-top: 80px">
-                <div class="row justify-content-center text-center mb-6">
-                    <div class="container">
-                    <div class="col-lg-11">
-                        <h2 class="fs-3 fs-sm-4 mb-3 ">Strategic Branding Leads to a Strong Brand Equity </h2>
+                <div class="row mx-auto justify-content-center text-center mb-6">
+                    
+                    <div class="col-lg-11 mx-auto">
+                        <h2 class=" mb-3 ">Strategic Branding Leads to a Strong Brand Equity </h2>
                        <p class="fs-2 text-sans-serif font-weight-normal text-dark text-center mt-4">
                             The ability to be different from the crowd is the main objective of branding. Branding is the process by which an organisation or an individual describes their image to the public. It involves everything from the style guide of the website to the dimensions of all your collateral. The importance of a logo in the process of branding is so prominent, that logos have become synonymous with branding.</p>
                       </div>
-                    </div>
+                   
                 </div>
               
             </div>
@@ -651,12 +682,12 @@
       
 
             <div class="container" style="margin-top: 90px">
-                <div class="row justify-content-center">
-                      <div class="container">
-                    <div class="col-lg-10 overflow-hidden">
+                <div class="row mx-auto  justify-content-center">
+                     
+                    <div class="col-lg-10 mx-auto overflow-hidden">
                       <p class="lead text-center">Logos are icons that represent your brand. They reveal a legible, recognisable face to your brand. A logo can be considered to be an intangible asset and we ensure it continues to be so. Set the stage for how your brand will be accepted in various scenarios. Cleverly designed logos can be used to establish more of what the brand beliefs.</p>
                   </div>
-                    </div>
+                    
                 </div>
                 <div class="row mt-5" style="text-align: center;">
 
@@ -700,12 +731,12 @@
                         
                     </div>
                 </div>
-                <div class="row justify-content-center mt-2">
-                      <div class="container">
-                    <div class="col-lg-11 overflow-hidden">
+                <div class="row mx-auto justify-content-center mt-2">
+                     
+                    <div class="col-lg-11 mx-auto overflow-hidden">
                         <p class="lead text-center mt-4">With that belief in our hearts, we ensure complete client satisfaction when it comes to creating the logo by not setting any limits on the number of iterations. When it comes to digital collateral, having customised icons for your various needs is a professional move these days. </p>
                     </div>
-                    </div>
+                  
                 </div>
 
             </div>
@@ -725,7 +756,7 @@
             <div class="container" >
                 <div class="row justify-content-center" style="margin-top: 100px">
                     <div class="col-12 mb-5 mb-md-7 text-center">
-                        <h2 class="fs-3 fs-sm-4 mb-5"><span class="text-underline">Branding on print collateral</span></h2>
+                        <h2 class=" mb-5">Branding on print collateral</h2>
                     </div>
                     <div class="col-lg-5 pr-lg-4 mb-4">
                         <div class="media" data-zanim-timeline="{}" data-zanim-trigger="scroll">
