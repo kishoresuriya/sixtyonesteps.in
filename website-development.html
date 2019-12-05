@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ⚡ lang="en-US" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,136 +14,466 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
     <meta name="theme-color" content="#000">
-    <!-- <link defer href="dist/css/web.css" rel="stylesheet" >  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" >
-      <!-- CSS Front Template -->
+    <link defer href="dist/css/web.css" rel="stylesheet" >  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- CSS Front Template -->
+
+
   
 
-      <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
-    <link href="assets/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/lib/lightbox2/css/lightbox.css" rel="stylesheet">
-    <link href="assets/css/theme.css" rel="stylesheet">
 
-
-<style>
-@media (min-width: 576px) {
-.space-sm-1,
-  .space-top-sm-1 {
-    padding-top: 2rem !important;
-  }
-  .space-sm-1,
-  .space-bottom-sm-1 {
-    padding-bottom: 2rem !important;
-  }
-
-  .order-sm-1 {
-    -ms-flex-order: 1;
-        order: 1;
-  }
-  .order-sm-2 {
-    -ms-flex-order: 2;
-        order: 2;
-  }
-  .order-sm-3 {
-    -ms-flex-order: 3;
-        order: 3;
-  }
-
-}
-
-
-/*------------------------------------
-  Paging Modern
-------------------------------------*/
-.u-paging-modern .u-paging-modern__arrow-icon-prev, .u-paging-modern .u-paging-modern__arrow-icon-next {
-  transition: 0.3s;
-}
-
-.u-paging-modern .u-paging-modern__arrow-icon-prev {
-  margin-right: 1rem;
-}
-
-.u-paging-modern .u-paging-modern__arrow-icon-next {
-  margin-left: 1rem;
-}
-
-.u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-  -webkit-transform: translateX(-8px);
-          transform: translateX(-8px);
-}
-
-.u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-  -webkit-transform: translateX(8px);
-          transform: translateX(8px);
-}
-
-.u-paging-modern-view-all {
-  color: #fff;
-  text-align: center;
-  background-color: #ffc107;
-}
-
-.u-paging-modern-view-all__icon {
-  display: block;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  transition: 0.3s;
-}
-
-.u-paging-modern-view-all:hover {
-  color: #fff;
-}
-
-.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-  -webkit-transform: translateY(-8px);
-          transform: translateY(-8px);
-}
-
-
-.font-weight-semi-bold {
-  font-weight: 600 !important;
-}
-</style>
-
-
-
-    <style >
-        @media (max-width:992px )
-        {
-            .t-c
-            {
-                text-align: center;
+    <style>
+        @media (min-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
             }
         }
 
+
+
+        @media (max-width:576px) {
+            .space-sm-1,
+            .space-top-sm-1 {
+                padding-top: 2rem
+            }
+            .space-sm-1,
+            .space-bottom-sm-1 {
+                padding-bottom: 2rem
+            }
+            .order-sm-1 {
+                -ms-flex-order: 1;
+                order: 1
+            }
+            .order-sm-2 {
+                -ms-flex-order: 2;
+                order: 2
+            }
+            .order-sm-3 {
+                -ms-flex-order: 3;
+                order: 3
+            }
+        }
+
+        .u-paging-modern .u-paging-modern__arrow-icon-prev,
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            transition: 0.3s
+        }
+
+        .u-paging-modern .u-paging-modern__arrow-icon-prev {
+            margin-right: 1rem
+        }
+
+        .u-paging-modern .u-paging-modern__arrow-icon-next {
+            margin-left: 1rem
+        }
+
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
+            -webkit-transform: translateX(-8px);
+            transform: translateX(-8px)
+        }
+
+        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
+            -webkit-transform: translateX(8px);
+            transform: translateX(8px)
+        }
+
+        .u-paging-modern-view-all {
+            color: #fff;
+            text-align: center;
+            background-color: #ffc107
+        }
+
+        .u-paging-modern-view-all__icon {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: .5rem;
+            transition: 0.3s
+        }
+
+        .u-paging-modern-view-all:hover {
+            color: #fff
+        }
+
+        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px)
+        }
+
+        .font-weight-semi-bold {
+            font-weight: 600
+        }
+    </style>
+
+
+
+    <style>
+        @media (max-width:992px) {
+            .t-c {
+                text-align: center;
+            }
+        }
     </style>
 
     <style>
-       .list1-inline{padding-left:0;list-style:none}.list1-inline-item{display:inline-block}.list1-inline-item:not(:last-child){margin-right:.5rem}@font-face{font-family:'Lato';font-style:normal;font-weight:100;src:local('Lato Hairline'),local('Lato-Hairline'),url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AUi-qNiXg7eU0.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:100;src:local('Lato Hairline'),local('Lato-Hairline'),url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:300;src:local('Lato Light'),local('Lato-Light'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:local('Lato Light'),local('Lato-Light'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:700;src:local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:900;src:local('Lato Black'),local('Lato-Black'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwaPGQ3q5d0N7w.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:900;font-display:swap;src:local('Lato Black'),local('Lato-Black'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCIzM_HxEcn7Hg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCszM_HxEcn7Hg.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCEzM_HxEcn7Hg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnC8zM_HxEck.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rC1cgT9rct48Q.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rm1cgT9rct48Q.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rO1cgT9rct48Q.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;font-display:swap;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_r21cgT9rcs.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFbzr-_dSb_nco.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFSzr-_dSb_nco.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFYzr-_dSb_nco.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@media only screen and (min-width:320px){.top1{margin-top:-40px}.bottom{margin-top:-100px}.topimg{width:500px;height:250px}.signup{margin-top:-70px}.icon1{text-align:center}}@media only screen and (min-width:411px){.top2{margin-top:-40px}.bottom{margin-top:-100px}.topimg{width:500px;height:250px}.icon1{text-align:center}}@media only screen and (min-width:768px){.top3{margin-top:-70px}.topimg{width:900px;height:500px}.top1{margin-top:-70px}.bottom{margin-top:-90px}.footer1{margin-top:-60px}.signup{margin-top:-80px}.icon1{text-align:center}}@media only screen and (min-width:992px){.top1{margin-top:-40px}.topimg{width:850px;height:500px}.top3{margin-top:-60px}.signup{margin-top:-120px}.margin-left{margin-left:20px}.icon1{text-align:left}}@media only screen and (min-width:1200px){.top1{margin-top:50px}.top3{margin-top:-50px}.topimg{width:900px;height:500px}.signup{margin-top:-130px}.margin-left{margin-left:80px}.icon1{text-align:left}}@media only screen and (min-width:1920px){.top1{margin-top:190px}.top3{margin-top:-50px}.topimg{width:900px;height:500px}.signup{margin-top:-130px}.margin-left{margin-left:80px}.icon1{text-align:left}}
+        .list1-inline {
+            padding-left: 0;
+            list-style: none
+        }
+
+        .list1-inline-item {
+            display: inline-block
+        }
+
+        .list1-inline-item:not(:last-child) {
+            margin-right: .5rem
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 100;
+            src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AUi-qNiXg7eU0.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 100;
+            src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 900;
+            src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwaPGQ3q5d0N7w.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'PT Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCIzM_HxEcn7Hg.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-family: 'PT Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCszM_HxEcn7Hg.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-family: 'PT Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCEzM_HxEcn7Hg.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'PT Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnC8zM_HxEck.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: italic;
+            font-weight: 400;
+            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rC1cgT9rct48Q.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: italic;
+            font-weight: 400;
+            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rm1cgT9rct48Q.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: italic;
+            font-weight: 400;
+            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rO1cgT9rct48Q.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_r21cgT9rcs.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFbzr-_dSb_nco.woff2) format('woff2');
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFSzr-_dSb_nco.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: normal;
+            font-weight: 400;
+            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFYzr-_dSb_nco.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: 'PT Serif';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        @media only screen and (min-width:320px) {
+            .top1 {
+                margin-top: -40px
+            }
+            .bottom {
+                margin-top: -100px
+            }
+            .topimg {
+                width: 500px;
+                height: 250px
+            }
+            .signup {
+                margin-top: -70px
+            }
+            .icon1 {
+                text-align: center
+            }
+        }
+
+        @media only screen and (min-width:411px) {
+            .top2 {
+                margin-top: -40px
+            }
+            .bottom {
+                margin-top: -100px
+            }
+            .topimg {
+                width: 500px;
+                height: 250px
+            }
+            .icon1 {
+                text-align: center
+            }
+        }
+
+        @media only screen and (min-width:768px) {
+            .top3 {
+                margin-top: -70px
+            }
+            .topimg {
+                width: 900px;
+                height: 500px
+            }
+            .top1 {
+                margin-top: -70px
+            }
+            .bottom {
+                margin-top: -90px
+            }
+            .footer1 {
+                margin-top: -60px
+            }
+            .signup {
+                margin-top: -80px
+            }
+            .icon1 {
+                text-align: center
+            }
+        }
+
+        @media only screen and (min-width:992px) {
+            .top1 {
+                margin-top: -40px
+            }
+            .topimg {
+                width: 850px;
+                height: 500px
+            }
+            .top3 {
+                margin-top: -60px
+            }
+            .signup {
+                margin-top: -120px
+            }
+            .margin-left {
+                margin-left: 20px
+            }
+            .icon1 {
+                text-align: left
+            }
+        }
+
+        @media only screen and (min-width:1200px) {
+            .top1 {
+                margin-top: 50px
+            }
+            .top3 {
+                margin-top: -50px
+            }
+            .topimg {
+                width: 900px;
+                height: 500px
+            }
+            .signup {
+                margin-top: -130px
+            }
+            .margin-left {
+                margin-left: 80px
+            }
+            .icon1 {
+                text-align: left
+            }
+        }
+
+        @media only screen and (min-width:1920px) {
+            .top1 {
+                margin-top: 190px
+            }
+            .top3 {
+                margin-top: -50px
+            }
+            .topimg {
+                width: 900px;
+                height: 500px
+            }
+            .signup {
+                margin-top: -130px
+            }
+            .margin-left {
+                margin-left: 80px
+            }
+            .icon1 {
+                text-align: left
+            }
+        }
     </style>
 
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://s3.amazonaws.com">
-     <link rel="preconnect" href="https://cdn.ampproject.org">
+    <link rel="preconnect" href="https://cdn.ampproject.org">
     <link rel="preconnect" href="https://salesiq.zoho.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111344734-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-111344734-2');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111344734-2');
+    </script>
 
 
 </head>
@@ -176,42 +507,42 @@
                 </li>
 
 
-                
-               <li class="fancynav-item fancy-dropdown">
+
+                <li class="fancynav-item fancy-dropdown">
                     <a class="fancynav-link fancy-dropdown-toggle" href="JavaScript:void(0)"><span class="fancynav-link-content">Services</span></a>
 
-                             <div class="fancy-dropdown-menu">
-              <div class="row pb-4">
-                <div class="col-sm-6  pr-4 mt-4">
-                    <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)"> Cloud Applications </a>
-                                        
-                    <a class="fancy-dropdown-item mt-3" href="crm-services.html">CRM Services</a>
+                    <div class="fancy-dropdown-menu">
+                        <div class="row pb-4">
+                            <div class="col-sm-6  pr-4 mt-4">
+                                <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)"> Cloud Applications </a>
 
-                    <a class="fancy-dropdown-item" href="hrms-services.html">HRMS Services</a>
-                    <a class="fancy-dropdown-item" href="team-collaboration.html">Team Collaboration</a>
-                </div>
-                <div class="col-sm-6  pr-4 mt-4">
-                      <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)">Content Services</a>
-                 <a class="fancy-dropdown-item mt-3" href="photography.html">Photography</a>
-                  <a class="fancy-dropdown-item" href="copy-writing.html">Copy Writing</a>
-                <a class="fancy-dropdown-item" href="graphic-design.html">Graphic Design</a>
-                  
-                </div>
-            
-                <div class="col-sm-6  pr-4 mt-4">
-                  <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)"> Development  </a>
-                    <a class="fancy-dropdown-item mt-3" href="website-development.html">Web Development</a>
-                    <a class="fancy-dropdown-item" href="custom-app-development.html">Custom  Applications</a>
-                    <a class="fancy-dropdown-item" href="search-engine-optimisation.html">SEO</a>
-                </div>
-                <div class="col-sm-6  pr-4 mt-4">
-                    <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)"> Digital Marketing</a>
-                    <a class="fancy-dropdown-item mt-3" href="email-marketing.html">Email Marketing</a>
-                    <a class="fancy-dropdown-item" href="social-media-management.html"> Social Media</a>
-                    <a class="fancy-dropdown-item" href="pay-per-click-advertisement.html"> Pay Per Click</a>
-                </div>
-              </div>
-            </div>
+                                <a class="fancy-dropdown-item mt-3" href="crm-services.html">CRM Services</a>
+
+                                <a class="fancy-dropdown-item" href="hrms-services.html">HRMS Services</a>
+                                <a class="fancy-dropdown-item" href="team-collaboration.html">Team Collaboration</a>
+                            </div>
+                            <div class="col-sm-6  pr-4 mt-4">
+                                <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)">Content Services</a>
+                                <a class="fancy-dropdown-item mt-3" href="photography.html">Photography</a>
+                                <a class="fancy-dropdown-item" href="copy-writing.html">Copy Writing</a>
+                                <a class="fancy-dropdown-item" href="graphic-design.html">Graphic Design</a>
+
+                            </div>
+
+                            <div class="col-sm-6  pr-4 mt-4">
+                                <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)"> Development  </a>
+                                <a class="fancy-dropdown-item mt-3" href="website-development.html">Web Development</a>
+                                <a class="fancy-dropdown-item" href="custom-app-development.html">Custom  Applications</a>
+                                <a class="fancy-dropdown-item" href="search-engine-optimisation.html">SEO</a>
+                            </div>
+                            <div class="col-sm-6  pr-4 mt-4">
+                                <a class="fancy-dropdown-item text-white font-weight-black ls text-uppercase fs--1 mb-1" href="JavaScript:void(0)"> Digital Marketing</a>
+                                <a class="fancy-dropdown-item mt-3" href="email-marketing.html">Email Marketing</a>
+                                <a class="fancy-dropdown-item" href="social-media-management.html"> Social Media</a>
+                                <a class="fancy-dropdown-item" href="pay-per-click-advertisement.html"> Pay Per Click</a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="fancynav-item fancy-dropdown">
                     <a class="fancynav-link fancy-dropdown-toggle" href="JavaScript:void(0)"><span class="fancynav-link-content">Projects</span></a>
@@ -283,8 +614,8 @@
                 <div class="row" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="col-lg-6 px-0">
                         <div class="h-100 py-7" data-zanim-lg='{"animation":"slide-right","from":{"opacity":1},"delay":0.4}' data-zanim-trigger="scroll">
-                             <amp-img src="assets/img/web/Images/SVG1.svg" layout="responsive" width="620" height="460" class="topimage mt-4" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"slide-right","delay":0}'></amp-img>
-                         
+                            <amp-img src="assets/img/web/Images/SVG1.svg" layout="responsive" width="620" height="460" class="topimage mt-4" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"slide-right","delay":0}'></amp-img>
+
 
                         </div>
                     </div>
@@ -307,14 +638,26 @@
                                     </div>
                                     <h2 class="font-weight-light text-uppercase fs-3 fs-lg-4" data-zanim-lg='{"delay":0.4}'>Web Design & Development &nbsp; <span class="font-weight-black"> Services </span></h2>
                                 </div>
-                                
-                                <div class="overflow-hidden t-c">
+
+                                <!-- <div class="overflow-hidden t-c">
                                     <div class="mt-3 mt-lg-5" data-zanim-xs='{"delay":0.6}'>
                                          <p class="mt-2 font-weight-bold" aria-current="page" style="color: #000" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}' data-zanim-trigger="scroll">Free Consultation &xrarr;</p>
                                         <a class="btn btn-danger" href="https://sixtyonesteps.zohobookings.com/#/customer/website-development" target="_blank">BOOK NOW</a>
                                        
                                     </div>
                                 </div>
+                              -->
+
+                                <div class="overflow-hidden t-c">
+                                    <div class="mt-5 mt-xl-5" data-zanim-xs='{"delay":0.6}'>
+
+                                        <a class="btn btn-danger btn-sm mr-2 my-2 " href="https://sixtyonesteps.zohobookings.com/#/customer/crm-services" data-offset="60" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Free Consultation</a>
+                                        <a class="btn btn-outline-danger btn-sm my-2" href="about.html#contactus" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Get a Quote &xrarr;</a>
+
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -328,151 +671,159 @@
 
         <section class=" bg-light " data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">
             <div class="container">
-            <div class="row mx-auto">
-          
-                <div class="col-lg-11 mx-auto">
+                <div class="row mx-auto">
 
-                      <h2 class="text-center mt-2">Your Address on the Internet is Your Website. </h2>
-              
-               
-                <p class="col-lg-12 fs-2 text-sans-serif font-weight-normal text-dark text-center mt-4"> In the ever-expanding internet a website is the digital face of your company. More often than not, a credible website is the first thing that will convert a rare visitor into a regular customer. Creating a website is a growing field that comprises three distinct processes content, design and development. </p>
-                 </div>
+                    <div class="col-lg-11 mx-auto">
+
+                        <h2 class="text-center mt-2">Your Address on the Internet is Your Website. </h2>
+
+
+                        <p class="col-lg-12 fs-2 text-sans-serif font-weight-normal text-dark text-center mt-4"> In the ever-expanding internet a website is the digital face of your company. More often than not, a credible website is the first thing that will convert a rare visitor into a regular customer. Creating a website is a growing field that comprises three distinct processes content, design and development. </p>
+                    </div>
+                </div>
             </div>
-        </div>
         </section>
 
         <!-- ============================================-->
         <!-- <section> begin ============================-->
-       
-            <div class="container" style="margin-top: 100px">
-                <div class="row">
-                    <div class="col-md-6 col-lg">
-                      <div class="icon1">
-                        <amp-img class="rounded img-fluid"  src="assets/img/web/Icons/01.svg" width="200" height="250" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll" ></amp-img>
-                      </div>
-                        <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <h4 class="mt-4 mb-2" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Content</h4>
-                             <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>
-                       The content of your site is the first thing that potential users will see.</p>
-                            <p class="mt-4" data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>We ensure that the content is optimised for search engines that will help give a higher likelihood of website indexed, ranked and appearing on search engines. </p>
 
-                        </div>
+        <div class="container" style="margin-top: 100px">
+            <div class="row">
+                <div class="col-md-6 col-lg">
+                    <div class="icon1">
+                        <amp-img class="rounded img-fluid" src="assets/img/web/Icons/01.svg" width="200" height="250" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"></amp-img>
                     </div>
-                    <div class="col-md-6 col-lg mt-6 mt-md-0">
-                         <div class="icon1">
+                    <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                        <h4 class="mt-4 mb-2" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Content</h4>
+                        <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>
+                            The content of your site is the first thing that potential users will see.</p>
+                        <p class="mt-4" data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>We ensure that the content is optimised for search engines that will help give a higher likelihood of website indexed, ranked and appearing on search engines. </p>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg mt-6 mt-md-0">
+                    <div class="icon1">
                         <amp-img class="rounded img-fluid" src="assets/img/web/Icons/02.svg" width="200" height="250" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"></amp-img>
-                      </div>
-                        <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <h4 class="mt-4 mb-2" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Design </h4>
-                              <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>
-                           Our developers have strong knowledge on creating a responsive website and ensure that the UI/UX is aligned with the client's vision and brand.</p> 
-                           <p class="mt-4" data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>  We work on User-Centred Design which aims at creating creative, beneficial solutions for the user's needs and requirements based on the system architecture of the site.
-                        </div>
                     </div>
-                    <div class="col-md-6 col-lg mt-6 mt-lg-0">
-                         <div class="icon1">
-                        <amp-img class="rounded img-fluid"  src="assets/img/web/Icons/03.svg" width="200" height="250" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"></amp-img>
-                      </div>
-                        <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <h4 class="mt-4 mb-2" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Development</h4>
-                              <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>
-                         Our teams focus on a mobile-first approach which lets us plan the content around the real estate available on the device.</p>
-                            <p class="mt-4 mb-4" data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>We pay attention to every page of the website build and adhering to best practices of the industry. We continue to test the site before and after.</p>
+                    <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                        <h4 class="mt-4 mb-2" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Design </h4>
+                        <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>
+                            Our developers have strong knowledge on creating a responsive website and ensure that the UI/UX is aligned with the client's vision and brand.</p>
+                        <p class="mt-4" data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'> We work on User-Centred Design which aims at creating creative, beneficial solutions for the user's needs and requirements based on the system architecture of the site.
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg mt-6 mt-lg-0">
+                    <div class="icon1">
+                        <amp-img class="rounded img-fluid" src="assets/img/web/Icons/03.svg" width="200" height="250" alt="" data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"></amp-img>
+                    </div>
+                    <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                        <h4 class="mt-4 mb-2" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Development</h4>
+                        <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>
+                            Our teams focus on a mobile-first approach which lets us plan the content around the real estate available on the device.</p>
+                        <p class="mt-4 mb-4" data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>We pay attention to every page of the website build and adhering to best practices of the industry. We continue to test the site before and after.</p>
 
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- end of .container-->
+        </div>
+        <!-- end of .container-->
 
 
 
-            <div class="border-top"></div>
-            <!-- end of .container-->
+        <div class="border-top"></div>
+        <!-- end of .container-->
 
-   
+
         <!-- <section> close ============================-->
         <!-- ============================================-->
 
 
-              <h2 class="text-center mb-3 mt-5">Portfolio</h2>
-            <div class="container">
-                <div class="row " >
-                    <div class="col-lg-6 text-center mt-5">
-                          <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Anand-Homes.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Anand-Homes.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
-              
-                     
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Anand Homes </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Serviced Apartments</p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="https://anandhomeschennai.in/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-                    <div class="col-lg-6 text-center mt-5">
-                         <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Brown-bread.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Brown-bread.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
-                       
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Brown Bread Company </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Cafe and Bakery </p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://brownbreadcompany.com/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-             
-                    <div class="col-lg-6 text-center mt-5">
-                         <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Dr-Sunder-Ganesh.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Dr-Sunder-Ganesh.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
-                      
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Dr Sunder Ganesh </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Orthopedic Surgeon</p>
+        <h2 class="text-center mb-3 mt-5">Portfolio</h2>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Anand-Homes.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Anand-Homes.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
 
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4 mb-5" href="https://drsunderorthocare.com" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-                    <div class="col-lg-6 text-center mt-5">
-                        <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Slab-Space.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Slab-Space.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
 
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Slab Space India & Co </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Natural Stones Exporter </p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://slabspace.in/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-             
-                    <div class="col-lg-6 text-center mt-5">
-                           <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Sunny-Ways.webp" alt="image" >
-                        <amp-img  fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Sunny-Ways.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Anand Homes </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Serviced Apartments</p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="https://anandhomeschennai.in/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Brown-bread.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Brown-bread.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
 
-                      
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Sunny Ways Agro Traders </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Agro Products Exporter</p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="https://sunnyways.in" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-                    <div class="col-lg-6 text-center mt-5">
-                           <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Terra-Neem.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Terra-Neem.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Brown Bread Company </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Cafe and Bakery </p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://brownbreadcompany.com/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
 
-                        
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Sun Bionaturals</h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Neem Products Exporter </p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://organicneem.com/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-              
-                    <div class="col-lg-6 text-center mt-5">
-                             <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Vilambi-technologies.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Vilambi-technologies.jpg"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Dr-Sunder-Ganesh.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Dr-Sunder-Ganesh.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
 
-                       <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Vilambi Technologies </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll"> IT and Strategy Consulting</p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="https://vilambitechnologies.com" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
-                    </div>
-                    <div class="col-lg-6 text-center mt-5">
-                        <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Holy-Grill.webp" alt="image" >
-                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid"  src="assets/img/web/carousel/Holy-Grill.png"  class="mt-3 img-fluid" alt="image" ></amp-img></amp-img>
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Dr Sunder Ganesh </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Orthopedic Surgeon</p>
 
-                        <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Holy Grill </h4>
-                        <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Veg Grill Restaurant </p>
-                        <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://holygrill.in/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4 mb-5" href="https://drsunderorthocare.com" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Slab-Space.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Slab-Space.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
 
-                    </div>
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Slab Space India & Co </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Natural Stones Exporter </p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://slabspace.in/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
+
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Sunny-Ways.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Sunny-Ways.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
+
+
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Sunny Ways Agro Traders </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Agro Products Exporter</p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="https://sunnyways.in" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Terra-Neem.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Terra-Neem.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
+
+
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Sun Bionaturals</h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Neem Products Exporter </p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://organicneem.com/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
+
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Vilambi-technologies.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Vilambi-technologies.jpg" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
+
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Vilambi Technologies </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll"> IT and Strategy Consulting</p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="https://vilambitechnologies.com" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+                </div>
+                <div class="col-lg-6 text-center mt-5">
+                    <amp-img layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Holy-Grill.webp" alt="image">
+                        <amp-img fallback layout="responsive" width="200" height="100" class="mt-3 img-fluid" src="assets/img/web/carousel/Holy-Grill.png" class="mt-3 img-fluid" alt="image"></amp-img>
+                    </amp-img>
+
+                    <h4 class="mt-4" data-zanim-xs='{"delay":0.1,"animation":"slide-down"}'>Holy Grill </h4>
+                    <p class=" font-italic text-500" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Veg Grill Restaurant </p>
+                    <a class="btn btn-outline-dark btn-sm rounded-capsule mt-4" href="http://holygrill.in/" target="_blank" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Visit Website</a>
+
                 </div>
             </div>
-   
+        </div>
+
 
 
 
@@ -483,18 +834,18 @@
 
             <div class="container" style="margin-top: 90px;">
                 <div class="row align-items-center">
-                  
-                    <div class="col-md-7 ml-auto" >
-                        <h3 class="mb-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}' data-zanim-trigger="scroll">Website Design & Development Process  </h3>
-                       
-         <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.4,"animation":"slide-right"}'>We work on the content, design and the development simultaneously, bringing to life the website's purpose - as detailed by clients in the website brief. We don't just try to design the website well but ensures that it serves the purpose and develop adhering to the latest web standards such as Accelerated Mobile Page (AMP) , Progressive Web App. </p>
+
+                    <div class="col-md-7 ml-auto">
+                        <h3 class="mb-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}' data-zanim-trigger="scroll">Website Design & Development Process </h3>
+
+                        <p class="mt-4" style="font-weight: 900;color: #000" data-zanim-xs='{"delay":0.4,"animation":"slide-right"}'>We work on the content, design and the development simultaneously, bringing to life the website's purpose - as detailed by clients in the website brief. We don't just try to design the website well but ensures that it serves the purpose and develop adhering to the latest web standards such as Accelerated Mobile Page (AMP) , Progressive Web App. </p>
 
                         <p class="text-sans-serif mt-4" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}' data-zanim-trigger="scroll">With all these services aligned under our one roof, we can offer transparency and clarity to you. Web design needs a minimum of 5 to 6 member team is involved in a web project, and each has at least two to three roles to play. </p>
                         <p class="text-sans-serif mt-4" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}' data-zanim-trigger="scroll">Since we work with the designers and content writers, we have the advantage of bringing in the development team during the pre-process of your website. SEO, Accessibility, PWA and best practices are complied as per lighthouse and Google page speed insights reportings.</p>
-                        
+
 
                     </div>
-                      <div class="col-md-4 margin-left mx-auto ml-auto" style="text-align: center;">
+                    <div class="col-md-4 margin-left mx-auto ml-auto" style="text-align: center;">
                         <amp-img class="img-fluid" layout="responsive" src="assets/img/web/Images/SVG2.svg" width="200" height="200" alt=""></amp-img>
 
 
@@ -512,17 +863,17 @@
         <div class="py-0 overflow-hidden bg-light" style="margin-top: 80px">
 
             <div class="container-fluid px-lg-0">
-               <div class="row mx-auto ml-auto">
-   <div class="col-lg-6 mx-auto ">
-                            <div class="text-sans-serif">
+                <div class="row mx-auto ml-auto">
+                    <div class="col-lg-6 mx-auto ">
+                        <div class="text-sans-serif">
 
-                                <h3 class="mt-5 font-weight-normal text-center">Stay Ahead Of   <span class='font-weight-black'> Your Competition </span></h3>
+                            <h3 class="mt-5 font-weight-normal text-center">Stay Ahead Of <span class='font-weight-black'> Your Competition </span></h3>
 
-                                <p class="mt-5" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}' data-zanim-trigger="scroll">The website has to be regularly updated to stay ahead of your competitors. The frequency of the updates depends on the nature of the site, users, the timeliness of the content accuracy. We are ready to work with you to continue to look into your site to maintain, repair and update it. Our services ensure that your website meets the current and the future requirements (Voice Search, Bots and ML). </p>
+                            <p class="mt-5" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}' data-zanim-trigger="scroll">The website has to be regularly updated to stay ahead of your competitors. The frequency of the updates depends on the nature of the site, users, the timeliness of the content accuracy. We are ready to work with you to continue to look into your site to maintain, repair and update it. Our services ensure that your website meets the current and the future requirements (Voice Search, Bots and ML). </p>
 
-                            </div>
+                        </div>
 
-                    <!--
+                        <!--
                         <div class="justify-content-center" style="display: flex;text-align: center;margin-bottom: 50px">
                             <div class="col-lg-4 mt-5">
                                 <a href="graphic-design.html" class="btn bg-dark btn-sm " data-zanim-xs='{"delay":0.3,"animation": "slide-left"}' data-zanim-trigger="scroll" style="color: white;">PREV</a>
@@ -537,17 +888,17 @@
                         </div>
 
                     -->
-                  
+
                     </div>
-                      
+
                 </div>
             </div>
 
 
 
 
-<!-- ============================================-->
-                <!-- <section> begin ============================--
+            <!-- ============================================-->
+            <!-- <section> begin ============================--
                 <section class="py-0 mb-5 mt-5" id="default-cta-4">
 
                     <div class="container">
@@ -600,8 +951,8 @@
 
         </section>
     -->
-        <!-- <section> close ============================-->
-        <!-- ============================================-->
+            <!-- <section> close ============================-->
+            <!-- ============================================-->
 
 
 
@@ -610,49 +961,49 @@
 
 
 
-<div class="container mb-5 mt-5">
+            <div class="container mb-5 mt-5">
 
-            <!-- Paging v1 Section -->
-<nav class="clearfix">
-  <div class="row no-gutters mx-auto">
-    
-    <a class="col-sm-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="graphic-design.html" style="background-image: url(../../assets/img/1920x800/img14.jpg); background-color: #1e2022; text-decoration: none;">
-      <!-- Paging v1 -->
-      <div class="px-7">
-        <span class="" style="color: #ea9a00;">Prev</span>
-        <div class="d-flex justify-content-between align-items-center mt-3">
-          <span class="fas fa-arrow-left u-paging-modern__arrow-icon-prev" style="color: #ea9a00;"></span>
-          <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">Graphic Design</h4>
-        </div>
-      </div>
-      <!-- End Paging v1 -->
-    </a>
+                <!-- Paging v1 Section -->
+                <nav class="clearfix">
+                    <div class="row no-gutters mx-auto">
 
-     <a class="col-sm-3 order-sm-2 u-paging-modern-view-all space-1 space-sm-1 mx-auto mt-2" href="about.html#contactus" style="text-decoration: none; background-color: #ea9a00;">
-      <!-- Paging v1 -->
-       <span class="fas fa-envelope fa-2x "></span> 
-     
-     <h4 class="mt-2" style="text-decoration: none; color: black;"> Get a Quote </h4>
+                        <a class="col-sm-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="graphic-design.html" style="background-image: url(../../assets/img/1920x800/img14.jpg); background-color: #1e2022; text-decoration: none;">
+                            <!-- Paging v1 -->
+                            <div class="px-7">
+                                <span class="" style="color: #ea9a00;">Prev</span>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="fas fa-arrow-left u-paging-modern__arrow-icon-prev" style="color: #ea9a00;"></span>
+                                    <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">Graphic Design</h4>
+                                </div>
+                            </div>
+                            <!-- End Paging v1 -->
+                        </a>
 
-      <!-- End Paging v1 -->
-    </a>
+                        <a class="col-sm-3 order-sm-2 u-paging-modern-view-all space-1 space-sm-1 mx-auto mt-2" href="about.html#contactus" style="text-decoration: none; background-color: #ea9a00;">
+                            <!-- Paging v1 -->
+                            <span class="fas fa-envelope fa-2x "></span>
 
-    <a class="col-sm-4 order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="custom-app-development.html" style="background-image: url(../../assets/img/1920x800/img15.jpg); background-color: #1e2022; text-decoration: none;">
-      <!-- Paging v1 -->
-      <div class="px-7">
-        <span class="" style="color: #ea9a00;">Next</span>
-        <div class="d-flex justify-content-between align-items-center mt-3">
-          <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">Custom Apps</h4>
-          <span class="fas fa-arrow-right u-paging-modern__arrow-icon-next" style="color: #ea9a00;"></span>
-        </div>
-      </div>
-      <!-- End Paging v1 -->
-    </a>
+                            <h4 class="mt-2" style="text-decoration: none; color: black;"> Get a Quote </h4>
 
-   
-  </div>
-</nav>
-</div>
+                            <!-- End Paging v1 -->
+                        </a>
+
+                        <a class="col-sm-4 order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="custom-app-development.html" style="background-image: url(../../assets/img/1920x800/img15.jpg); background-color: #1e2022; text-decoration: none;">
+                            <!-- Paging v1 -->
+                            <div class="px-7">
+                                <span class="" style="color: #ea9a00;">Next</span>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">Custom Apps</h4>
+                                    <span class="fas fa-arrow-right u-paging-modern__arrow-icon-next" style="color: #ea9a00;"></span>
+                                </div>
+                            </div>
+                            <!-- End Paging v1 -->
+                        </a>
+
+
+                    </div>
+                </nav>
+            </div>
 
             <!-- end of .container-->
 
@@ -661,14 +1012,14 @@
 
 
 
-        
+
         <!-- <section> close ============================-->
         <!-- ============================================-->
 
 
         <!-- ============================================-->
         <!-- <section> begin ============================-->
-        <section class="bg-dark py-4 text-sans-serif" >
+        <section class="bg-dark py-4 text-sans-serif">
 
             <div class="container">
                 <div class="row">
@@ -832,12 +1183,12 @@
         }
     </script>
     <script>
-      window.lazyLoadOptions = {
-        elements_selector: "[loading=lazy]",
-        use_native: true // ← enables hybrid lazy loading
-      };
+        window.lazyLoadOptions = {
+            elements_selector: "[loading=lazy]",
+            use_native: true // ← enables hybrid lazy loading
+        };
     </script>
-    
+
     <!-- Include vanilla lazyload 12 through an async script -->
     <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
 
