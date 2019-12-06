@@ -31,9 +31,9 @@ gulp.task('css', async function(){
 });
 
 gulp.task('uncss', async function () {
-    return gulp.src('assets/css/search-engine-optimisation.css')
+    return gulp.src('assets/css/social-media-management.css')
         .pipe(uncss({
-            html: ['search-engine-optimisation.html', 'posts/**/*.html', 'http://example.com']
+            html: ['social-media-management.html', 'posts/**/*.html', 'http://example.com']
         }))
         .pipe(gulp.dest('./dist/css'));
 });

@@ -13,695 +13,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
     <meta name="theme-color" content="#000">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <link defer href="dist/css/crm-services.css" rel="stylesheet">
+
+   
+
+
+
     <style amp-custom>
-        .modal-open {
-            overflow: hidden
-        }
-
-        .modal-open .modal {
-            overflow-x: hidden;
-            overflow-y: auto
-        }
-
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1050;
-            display: none;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            outline: 0
-        }
-
-        .modal-dialog {
-            position: relative;
-            width: auto;
-            margin: .5rem;
-            pointer-events: none
-        }
-
-        .modal.fade .modal-dialog {
-            -webkit-transition: -webkit-transform 0.3s ease-out;
-            transition: -webkit-transform 0.3s ease-out;
-            -o-transition: transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
-            transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-            -webkit-transform: translate(0, -50px);
-            -ms-transform: translate(0, -50px);
-            transform: translate(0, -50px)
-        }
-
-        @media (prefers-reduced-motion:reduce) {
-            .modal.fade .modal-dialog {
-                -webkit-transition: none;
-                -o-transition: none;
-                transition: none
-            }
-        }
-
-        .modal.show .modal-dialog {
-            -webkit-transform: none;
-            -ms-transform: none;
-            transform: none
-        }
-
-        .modal-dialog-scrollable {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            max-height: calc(100% - 1rem)
-        }
-
-        .modal-dialog-scrollable .modal-content {
-            max-height: calc(100vh - 1rem);
-            overflow: hidden
-        }
-
-        .modal-dialog-scrollable .modal-header,
-        .modal-dialog-scrollable .modal-footer {
-            -ms-flex-negative: 0;
-            flex-shrink: 0
-        }
-
-        .modal-dialog-scrollable .modal-body {
-            overflow-y: auto
-        }
-
-        .modal-dialog-centered {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            min-height: calc(100% - 1rem)
-        }
-
-        .modal-dialog-centered::before {
-            display: block;
-            height: calc(100vh - 1rem);
-            content: ""
-        }
-
-        .modal-dialog-centered.modal-dialog-scrollable {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            height: 100%
-        }
-
-        .modal-dialog-centered.modal-dialog-scrollable .modal-content {
-            max-height: none
-        }
-
-        .modal-dialog-centered.modal-dialog-scrollable::before {
-            content: none
-        }
-
-        .modal-content {
-            position: relative;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            width: 100%;
-            pointer-events: auto;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 1px solid rgba(0, 0, 0, .2);
-            border-radius: .1875rem;
-            outline: 0
-        }
-
-        .modal-backdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1040;
-            width: 100vw;
-            height: 100vh;
-            background-color: #000
-        }
-
-        .modal-backdrop.fade {
-            opacity: 0
-        }
-
-        .modal-backdrop.show {
-            opacity: .5
-        }
-
-        .modal-header {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: start;
-            -ms-flex-align: start;
-            align-items: flex-start;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-            padding: 1rem 1rem;
-            border-bottom: 1px solid #e1e1e1;
-            border-top-left-radius: .1875rem;
-            border-top-right-radius: .1875rem
-        }
-
-        .modal-header .close {
-            padding: 1rem 1rem;
-            margin: -1rem -1rem -1rem auto
-        }
-
-        .modal-title {
-            margin-bottom: 0;
-            line-height: 1.45
-        }
-
-        .modal-body {
-            position: relative;
-            -webkit-box-flex: 1;
-            -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-            padding: 1rem
-        }
-
-        .modal-footer {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: end;
-            -ms-flex-pack: end;
-            justify-content: flex-end;
-            padding: 1rem;
-            border-top: 1px solid #e1e1e1;
-            border-bottom-right-radius: .1875rem;
-            border-bottom-left-radius: .1875rem
-        }
-
-        .modal-footer>:not(:first-child) {
-            margin-left: .25rem
-        }
-
-        .modal-footer>:not(:last-child) {
-            margin-right: .25rem
-        }
-
-        .modal-scrollbar-measure {
-            position: absolute;
-            top: -9999px;
-            width: 50px;
-            height: 50px;
-            overflow: scroll
-        }
-
-        @media (min-width:576px) {
-            .modal-dialog {
-                max-width: 500px;
-                margin: 1.75rem auto
-            }
-            .modal-dialog-scrollable {
-                max-height: calc(100% - 3.5rem)
-            }
-            .modal-dialog-scrollable .modal-content {
-                max-height: calc(100vh - 3.5rem)
-            }
-            .modal-dialog-centered {
-                min-height: calc(100% - 3.5rem)
-            }
-            .modal-dialog-centered::before {
-                height: calc(100vh - 3.5rem)
-            }
-            .modal-sm {
-                max-width: 300px
-            }
-        }
-
-        @media (min-width:992px) {
-            .modal-lg,
-            .modal-xl {
-                max-width: 800px
-            }
-        }
-
-        @media (min-width:1200px) {
-            .modal-xl {
-                max-width: 1140px
-            }
-        }
-
-        @media (min-width:576px) {
-            .space-sm-1,
-            .space-top-sm-1 {
-                padding-top: 2rem
-            }
-            .space-sm-1,
-            .space-bottom-sm-1 {
-                padding-bottom: 2rem
-            }
-            .order-sm-1 {
-                -ms-flex-order: 1;
-                order: 1
-            }
-            .order-sm-2 {
-                -ms-flex-order: 2;
-                order: 2
-            }
-            .order-sm-3 {
-                -ms-flex-order: 3;
-                order: 3
-            }
-        }
-
-        @media (max-width:576px) {
-            .space-sm-1,
-            .space-top-sm-1 {
-                padding-top: 2rem
-            }
-            .space-sm-1,
-            .space-bottom-sm-1 {
-                padding-bottom: 2rem
-            }
-            .order-sm-1 {
-                -ms-flex-order: 1;
-                order: 1
-            }
-            .order-sm-2 {
-                -ms-flex-order: 2;
-                order: 2
-            }
-            .order-sm-3 {
-                -ms-flex-order: 3;
-                order: 3
-            }
-        }
-
-        .u-paging-modern .u-paging-modern__arrow-icon-prev,
-        .u-paging-modern .u-paging-modern__arrow-icon-next {
-            transition: 0.3s
-        }
-
-        .u-paging-modern .u-paging-modern__arrow-icon-prev {
-            margin-right: 1rem
-        }
-
-        .u-paging-modern .u-paging-modern__arrow-icon-next {
-            margin-left: 1rem
-        }
-
-        .u-paging-modern:hover .u-paging-modern__arrow-icon-prev {
-            -webkit-transform: translateX(-8px);
-            transform: translateX(-8px)
-        }
-
-        .u-paging-modern:hover .u-paging-modern__arrow-icon-next {
-            -webkit-transform: translateX(8px);
-            transform: translateX(8px)
-        }
-
-        .u-paging-modern-view-all {
-            color: #fff;
-            text-align: center;
-            background-color: #ffc107
-        }
-
-        .u-paging-modern-view-all__icon {
-            display: block;
-            font-size: 2rem;
-            margin-bottom: .5rem;
-            transition: 0.3s
-        }
-
-        .u-paging-modern-view-all:hover {
-            color: #fff
-        }
-
-        .u-paging-modern-view-all:hover .u-paging-modern-view-all__icon {
-            -webkit-transform: translateY(-8px);
-            transform: translateY(-8px)
-        }
-
-        .font-weight-semi-bold {
-            font-weight: 600
-        }
-
-        .list1-inline {
-            padding-left: 0;
-            list-style: none
-        }
-
-        .list1-inline-item {
-            display: inline-block
-        }
-
-        .list1-inline-item:not(:last-child) {
-            margin-right: .5rem
-        }
-
-        @media only screen and (min-width:320px) {
-            .top1 {
-                margin-top: -80px
-            }
-            .icon {
-                margin-top: 50px
-            }
-            .signup {
-                margin-top: -70px
-            }
-        }
-
-        @media only screen and (min-width:411px) {
-            .top1 {
-                margin-top: -80px
-            }
-            .topimg {
-                width: 500px;
-                height: 250px
-            }
-            .signup {
-                margin-top: -70px
-            }
-        }
-
-        @media only screen and (max-width:768px) {
-            .tp {
-                margin-top: 30px
-            }
-        }
-
-        @media only screen and (min-width:768px) {
-            .top1 {
-                margin-top: -150px
-            }
-            .top2 {
-                margin-top: -60px
-            }
-            .icon {
-                margin-top: 1px
-            }
-            .footer1 {
-                margin-top: -60px
-            }
-            .signup {
-                margin-top: -80px
-            }
-        }
-
-        @media only screen and (min-width:992px) {
-            .top1 {
-                margin-top: -1px
-            }
-            .topimage {
-                margin-top: 65px
-            }
-            .top2 {
-                margin-top: -60px
-            }
-            .icon {
-                margin-top: 1px
-            }
-            .signup {
-                margin-top: -120px
-            }
-        }
-
-        @media only screen and (min-width:1200px) {
-            .top1 {
-                margin-top: 50px
-            }
-            .top2 {
-                margin-top: -60px
-            }
-            .topimage {
-                margin-top: 1px
-            }
-            .signup {
-                margin-top: -120px
-            }
-            .icon {
-                margin-top: 1px
-            }
-        }
-
-        @media only screen and (min-width:1920px) {
-            .top1 {
-                margin-top: 170px
-            }
-            .topimage {
-                margin-top: 1px
-            }
-            .top2 {
-                margin-top: -60px
-            }
-            .icon {
-                margin-top: 1px
-            }
-            .signup {
-                margin-top: -120px
-            }
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 100;
-            src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AUi-qNiXg7eU0.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 100;
-            src: local('Lato Hairline'), local('Lato-Hairline'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 300;
-            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 700;
-            font-display: swap;
-            src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 900;
-            src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwaPGQ3q5d0N7w.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'PT Mono';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCIzM_HxEcn7Hg.woff2) format('woff2');
-            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-        }
-
-        @font-face {
-            font-family: 'PT Mono';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCszM_HxEcn7Hg.woff2) format('woff2');
-            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-        }
-
-        @font-face {
-            font-family: 'PT Mono';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCEzM_HxEcn7Hg.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'PT Mono';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnC8zM_HxEck.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: italic;
-            font-weight: 400;
-            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rC1cgT9rct48Q.woff2) format('woff2');
-            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: italic;
-            font-weight: 400;
-            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rm1cgT9rct48Q.woff2) format('woff2');
-            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: italic;
-            font-weight: 400;
-            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rO1cgT9rct48Q.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: italic;
-            font-weight: 400;
-            font-display: swap;
-            src: local('PT Serif Italic'), local('PTSerif-Italic'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_r21cgT9rcs.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFbzr-_dSb_nco.woff2) format('woff2');
-            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFSzr-_dSb_nco.woff2) format('woff2');
-            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: normal;
-            font-weight: 400;
-            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFYzr-_dSb_nco.woff2) format('woff2');
-            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
-        }
-
-        @font-face {
-            font-family: 'PT Serif';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2) format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
-        }
-
-        @media (min-width:992px) {
-            .border-lg-bottom {
-                border-bottom: 1px solid #e1e1e1
-            }
-            .border-lg-left {
-                border-left: 1px solid #e1e1e1
-            }
-            .border-lg-right {
-                border-right: 1px solid #e1e1e1
-            }
-        }
-
-        @media (max-width:992px) {
-            .t-c {
-                text-align: center
-            }
-        }
-
-        @media (min-width:992px) {
-            .border-b {
-                padding-bottom: 160px;
-                padding-top: 150px
-            }
-        }
-
-        @media only screen and (max-width:768px) {
-            .fcrm {
-                margin-top: 30px
-            }
-            .mtp {
-                margin-top: 15px
-            }
-        }
-
-        @media only screen and (max-width:411px) {
-            .fcrm {
-                margin-top: 10px
-            }
-            .lu {
-                margin-top: 5px
-            }
-        }
+      .modal-open{overflow:hidden}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0}.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform 0.3s ease-out;transition:-webkit-transform 0.3s ease-out;-o-transition:transform 0.3s ease-out;transition:transform 0.3s ease-out;transition:transform 0.3s ease-out,-webkit-transform 0.3s ease-out;-webkit-transform:translate(0,-50px);-ms-transform:translate(0,-50px);transform:translate(0,-50px)}@media (prefers-reduced-motion:reduce){.modal.fade .modal-dialog{-webkit-transition:none;-o-transition:none;transition:none}}.modal.show .modal-dialog{-webkit-transform:none;-ms-transform:none;transform:none}.modal-dialog-scrollable{display:-webkit-box;display:-ms-flexbox;display:flex;max-height:calc(100% - 1rem)}.modal-dialog-scrollable .modal-content{max-height:calc(100vh - 1rem);overflow:hidden}.modal-dialog-scrollable .modal-header,.modal-dialog-scrollable .modal-footer{-ms-flex-negative:0;flex-shrink:0}.modal-dialog-scrollable .modal-body{overflow-y:auto}.modal-dialog-centered{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:calc(100% - 1rem)}.modal-dialog-centered::before{display:block;height:calc(100vh - 1rem);content:""}.modal-dialog-centered.modal-dialog-scrollable{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:100%}.modal-dialog-centered.modal-dialog-scrollable .modal-content{max-height:none}.modal-dialog-centered.modal-dialog-scrollable::before{content:none}.modal-content{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.1875rem;outline:0}.modal-backdrop{position:fixed;top:0;left:0;z-index:1040;width:100vw;height:100vh;background-color:#000}.modal-backdrop.fade{opacity:0}.modal-backdrop.show{opacity:.5}.modal-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:1rem 1rem;border-bottom:1px solid #e1e1e1;border-top-left-radius:.1875rem;border-top-right-radius:.1875rem}.modal-header .close{padding:1rem 1rem;margin:-1rem -1rem -1rem auto}.modal-title{margin-bottom:0;line-height:1.45}.modal-body{position:relative;-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem}.modal-footer{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding:1rem;border-top:1px solid #e1e1e1;border-bottom-right-radius:.1875rem;border-bottom-left-radius:.1875rem}.modal-footer>:not(:first-child){margin-left:.25rem}.modal-footer>:not(:last-child){margin-right:.25rem}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:576px){.modal-dialog{max-width:500px;margin:1.75rem auto}.modal-dialog-scrollable{max-height:calc(100% - 3.5rem)}.modal-dialog-scrollable .modal-content{max-height:calc(100vh - 3.5rem)}.modal-dialog-centered{min-height:calc(100% - 3.5rem)}.modal-dialog-centered::before{height:calc(100vh - 3.5rem)}.modal-sm{max-width:300px}}@media (min-width:992px){.modal-lg,.modal-xl{max-width:800px}}@media (min-width:1200px){.modal-xl{max-width:1140px}}@media (min-width:576px){.space-sm-1,.space-top-sm-1{padding-top:2rem}.space-sm-1,.space-bottom-sm-1{padding-bottom:2rem}.order-sm-1{-ms-flex-order:1;order:1}.order-sm-2{-ms-flex-order:2;order:2}.order-sm-3{-ms-flex-order:3;order:3}}@media (max-width:576px){.space-sm-1,.space-top-sm-1{padding-top:2rem}.space-sm-1,.space-bottom-sm-1{padding-bottom:2rem}.order-sm-1{-ms-flex-order:1;order:1}.order-sm-2{-ms-flex-order:2;order:2}.order-sm-3{-ms-flex-order:3;order:3}}.u-paging-modern .u-paging-modern__arrow-icon-prev,.u-paging-modern .u-paging-modern__arrow-icon-next{transition:0.3s}.u-paging-modern .u-paging-modern__arrow-icon-prev{margin-right:1rem}.u-paging-modern .u-paging-modern__arrow-icon-next{margin-left:1rem}.u-paging-modern:hover .u-paging-modern__arrow-icon-prev{-webkit-transform:translateX(-8px);transform:translateX(-8px)}.u-paging-modern:hover .u-paging-modern__arrow-icon-next{-webkit-transform:translateX(8px);transform:translateX(8px)}.u-paging-modern-view-all{color:#fff;text-align:center;background-color:#ffc107}.u-paging-modern-view-all__icon{display:block;font-size:2rem;margin-bottom:.5rem;transition:0.3s}.u-paging-modern-view-all:hover{color:#fff}.u-paging-modern-view-all:hover .u-paging-modern-view-all__icon{-webkit-transform:translateY(-8px);transform:translateY(-8px)}.font-weight-semi-bold{font-weight:600}.list1-inline{padding-left:0;list-style:none}.list1-inline-item{display:inline-block}.list1-inline-item:not(:last-child){margin-right:.5rem}@media only screen and (min-width:320px){.top1{margin-top:-80px}.icon{margin-top:50px}.signup{margin-top:-70px}}@media only screen and (min-width:411px){.top1{margin-top:-80px}.topimg{width:500px;height:250px}.signup{margin-top:-70px}}@media only screen and (max-width:768px){.tp{margin-top:30px}}@media only screen and (min-width:768px){.top1{margin-top:-150px}.top2{margin-top:-60px}.icon{margin-top:1px}.footer1{margin-top:-60px}.signup{margin-top:-80px}}@media only screen and (min-width:992px){.top1{margin-top:-1px}.topimage{margin-top:65px}.top2{margin-top:-60px}.icon{margin-top:1px}.signup{margin-top:-120px}}@media only screen and (min-width:1200px){.top1{margin-top:50px}.top2{margin-top:-60px}.topimage{margin-top:1px}.signup{margin-top:-120px}.icon{margin-top:1px}}@media only screen and (min-width:1920px){.top1{margin-top:170px}.topimage{margin-top:1px}.top2{margin-top:-60px}.icon{margin-top:1px}.signup{margin-top:-120px}}@font-face{font-family:'Lato';font-style:normal;font-weight:100;src:local('Lato Hairline'),local('Lato-Hairline'),url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AUi-qNiXg7eU0.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:100;src:local('Lato Hairline'),local('Lato-Hairline'),url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHh30AXC-qNiXg7Q.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:300;src:local('Lato Light'),local('Lato-Light'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwaPGQ3q5d0N7w.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:local('Lato Light'),local('Lato-Light'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:400;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:local('Lato Regular'),local('Lato-Regular'),url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:700;src:local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:local('Lato Bold'),local('Lato-Bold'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Lato';font-style:normal;font-weight:900;src:local('Lato Black'),local('Lato-Black'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwaPGQ3q5d0N7w.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Lato';font-style:normal;font-weight:900;font-display:swap;src:local('Lato Black'),local('Lato-Black'),url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh50XSwiPGQ3q5d0.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCIzM_HxEcn7Hg.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCszM_HxEcn7Hg.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnCEzM_HxEcn7Hg.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Mono';font-style:normal;font-weight:400;src:local('PT Mono'),local('PTMono-Regular'),url(https://fonts.gstatic.com/s/ptmono/v6/9oRONYoBnWILk-9AnC8zM_HxEck.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rC1cgT9rct48Q.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rm1cgT9rct48Q.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_rO1cgT9rct48Q.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Serif';font-style:italic;font-weight:400;font-display:swap;src:local('PT Serif Italic'),local('PTSerif-Italic'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRTQgYoZZY2vCFuvAFT_r21cgT9rcs.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFbzr-_dSb_nco.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFSzr-_dSb_nco.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFYzr-_dSb_nco.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:local('PT Serif'),local('PTSerif-Regular'),url(https://fonts.gstatic.com/s/ptserif/v10/EJRVQgYoZZY2vCFuvAFWzr-_dSb_.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@media (min-width:992px){.border-lg-bottom{border-bottom:1px solid #e1e1e1}.border-lg-left{border-left:1px solid #e1e1e1}.border-lg-right{border-right:1px solid #e1e1e1}}@media (max-width:992px){.t-c{text-align:center}}@media (min-width:992px){.border-b{padding-bottom:160px;padding-top:150px}}@media only screen and (max-width:768px){.fcrm{margin-top:30px}.mtp{margin-top:15px}}@media only screen and (max-width:411px){.fcrm{margin-top:10px}.lu{margin-top:5px}}
     </style>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
 
+    <link defer href="dist/css/crm-services.css" rel="stylesheet">
+
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://s3.amazonaws.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -1136,296 +461,296 @@
                 </div>
             </div>
             <!-- end of .container-->
-        </section>
+</section>
 
 
+            
+       
 
 
-
-
-
-        <div class="container">
-
-            <div class="col-lg-12 ">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-6">
-
-
-                        <h2 class=" mb-3">Features Of CRM</h2>
-                        <p class="text-500 font-italic">Feature Rich and Suitable for Businesses of all sizes and Industries.</p>
-
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 50px">
-                    <div class="col-lg-4 col-md-6 col-sm-11 mx-auto">
-                        <div class="card">
-
-                            <div class="media text-sans-serif overflow-hidden " data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-
-                                <div class="media-body pt-4 pb-3">
-                                    <div class="overflow-hidden mx-auto text-center">
-
-                                        <div class="">
-
-
-                                            <img class="mx-auto text-center mb-3" src="assets/img/icons/icon-startup.svg" alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
-                                        </div>
-
-
-                                        <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>
-                                            <spn class="bg-danger" style="color: white;">Targeted Marketing</spn>
-                                        </h4>
-                                    </div>
-                                    <div class="overflow-hidden">
-
-
-                                        <ul class="mt-3">
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}'>Advanced Filters</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.2,"animation": "slide-right"}'>Email parser | Reminders</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}'>Lead | Deal Scoring Rules</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}'>Sales Signals | Email Insights</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.5,"animation": "slide-right"}'>Email Association with Deals</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}'>Sales Forecasting | Dashboards</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.7,"animation": "slide-right"}'>Tasks | Events | Calls | Notes</li>
-                                        </ul>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-11 mx-auto mt-6 mt-md-0">
-                        <div class="card">
-
-                            <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-
-                                <div class="media-body pt-4 pb-3">
-                                    <div class="overflow-hidden mx-auto text-center">
-
-                                        <div class="">
-
-                                            <img class="mx-auto text-center mb-3" src="assets/img/icons/icon-target.svg" alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
-                                        </div>
-
-                                        <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>
-                                            <spn class="bg-danger" style="color: white;">Focused Sales </spn>
-                                        </h4>
-                                    </div>
-                                    <div class="overflow-hidden">
-
-
-                                        <ul class="mt-3">
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}'>Auto Responders</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.2,"animation": "slide-right"}'>Google Ads Integration</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}'>Website visitor tracking</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}'>Templates & Mass email</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.5,"animation": "slide-right"}'>Webforms - Lead & Contact</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}'>Social Lead Generation</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.7,"animation": "slide-right"}'>Multi Channel campaigns</li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-md-6 col-sm-11 mx-auto mt-6 mt-md-0 ">
-                        <div class="card fcrm">
-
-                            <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
-
-                                <div class="media-body pt-4 pb-3">
-                                    <div class="overflow-hidden mx-auto text-center">
-                                        <div class=" ">
-                                            <img class="mx-auto text-center mb-3" src="assets/img/icons/icon-teamwork.svg" alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
-                                        </div>
-                                        <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>
-                                            <spn class="bg-danger" style="color: white;">Customer Support</spn>
-                                        </h4>
-                                    </div>
-                                    <div class="overflow-hidden">
-
-
-
-                                        <ul class="mt-3">
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}'>Cases | Tickets</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.2,"animation": "slide-right"}'>Web to case from</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}'>Approval process</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}'>Case escalation rules</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.5,"animation": "slide-right"}'>Assignment | Workflow</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}'>Self Service User Portal</li>
-                                            <li class="mt-3" data-zanim-xs='{"delay":0.7,"animation": "slide-right"}'>Field | Scheduled Action</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-
-        <section>
 
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 ">
+
+                <div class="col-lg-12 ">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-6">
 
 
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6 mb-7 text-center">
-                                <h2 class="text-center  mb-3">Find the Right Package</h2>
-                                <p class="text-500 font-italic">Sixty One Steps gives you the best output at the lowest investment and fills all your needs. Choose from the pricing plans that suits you best.</p>
+                            <h2 class=" mb-3">Features Of CRM</h2>
+                            <p class="text-500 font-italic">Feature Rich and Suitable for Businesses of all sizes and Industries.</p>
+
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 50px">
+                        <div class="col-lg-4 col-md-6 col-sm-11 mx-auto">
+                            <div class="card">
+
+                                <div class="media text-sans-serif overflow-hidden " data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+
+                                    <div class="media-body pt-4 pb-3">
+                                        <div class="overflow-hidden mx-auto text-center">
+
+                                            <div class="">
+
+
+                                                <img class="mx-auto text-center mb-3" src="assets/img/icons/icon-startup.svg" alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+                                            </div>
+
+
+                                            <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>
+                                                <spn class="bg-danger" style="color: white;">Targeted Marketing</spn>
+                                            </h4>
+                                        </div>
+                                        <div class="overflow-hidden">
+
+
+                                            <ul class="mt-3">
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}'>Advanced Filters</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.2,"animation": "slide-right"}'>Email parser | Reminders</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}'>Lead | Deal Scoring Rules</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}'>Sales Signals | Email Insights</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.5,"animation": "slide-right"}'>Email Association with Deals</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}'>Sales Forecasting | Dashboards</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.7,"animation": "slide-right"}'>Tasks | Events | Calls | Notes</li>
+                                            </ul>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-11 mx-auto mt-6 mt-md-0">
+                            <div class="card">
+
+                                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
+
+                                    <div class="media-body pt-4 pb-3">
+                                        <div class="overflow-hidden mx-auto text-center">
+
+                                            <div class="">
+
+                                                <img class="mx-auto text-center mb-3" src="assets/img/icons/icon-target.svg" alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+                                            </div>
+
+                                            <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>
+                                                <spn class="bg-danger" style="color: white;">Focused Sales </spn>
+                                            </h4>
+                                        </div>
+                                        <div class="overflow-hidden">
+
+
+                                            <ul class="mt-3">
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}'>Auto Responders</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.2,"animation": "slide-right"}'>Google Ads Integration</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}'>Website visitor tracking</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}'>Templates & Mass email</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.5,"animation": "slide-right"}'>Webforms - Lead & Contact</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}'>Social Lead Generation</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.7,"animation": "slide-right"}'>Multi Channel campaigns</li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
 
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12 col-sm-12">
-                                <div class="card pl-4 pt-3">
+                        <div class="col-lg-4 col-md-6 col-sm-11 mx-auto mt-6 mt-md-0 ">
+                            <div class="card fcrm">
 
+                                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
 
-
-
-                                    <div class="row">
-                                        <div class=" col-lg-5 col-md-5 col-sm-8 mt-2 my-auto mt-md-0 mx-auto " data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                                            <amp-img class="mb-3" src="assets/img/icons/package2.svg" alt="" width="120" height="120"></amp-img>
-                                            <div class="overflow-hidden">
-                                                <h2 data-zanim-xs='{"delay":0.1}'>Starter Package</h2>
+                                    <div class="media-body pt-4 pb-3">
+                                        <div class="overflow-hidden mx-auto text-center">
+                                            <div class=" ">
+                                                <img class="mx-auto text-center mb-3" src="assets/img/icons/icon-teamwork.svg" alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
                                             </div>
-                                            <div class="overflow-hidden">
-                                                <h4 class="text-serif font-weight-light font-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>starting at</h4>
-                                            </div>
-                                            <div class="overflow-hidden">
-
-                                                <h4 class="mb-4" data-zanim-xs='{"delay":0.3}'> 15$ (USD) Per Hour </h4>
-                                            </div>
+                                            <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>
+                                                <spn class="bg-danger" style="color: white;">Customer Support</spn>
+                                            </h4>
                                         </div>
+                                        <div class="overflow-hidden">
 
-                                        <div class=" col-lg-7 col-md-7 col-sm-8 mt-2  mt-md-0 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                                            <div class="oveflow-hidden ">
-                                                <div class="row mx-auto">
-                                                    <div class="col-lg-12 col-sm-8 mx-auto">
-                                                        <ul class="style-check pl-0 " data-zanim-xs='{"delay":0.4}'>
-                                                            <li class="d-inline-block d-md-block">Cloud & Mobile Application </li>
-                                                            <li class="d-inline-block d-md-block">Team Collaboration</li>
-                                                            <li class="d-inline-block d-md-block">Google Apps Integrations</li>
-                                                            <li class="d-inline-block d-md-block">Social Media Setup & Automation</li>
-                                                            <li class="d-inline-block d-md-block">Document Management & Sharing</li>
-                                                            <li class="d-inline-block d-md-block">Sales Process Setup & Automation</li>
-                                                            <li class="d-inline-block d-md-block">Support Process Automation</li>
-                                                            <li class="d-inline-block d-md-block">Marketing Process Automation</li>
 
-                                                        </ul>
-                                                    </div>
-                                                </div>
 
-                                                <a class="btn btn-danger  text-center mx-auto btn-sm mr-2 my-2 " href="https://sixtyonesteps.zohobookings.com/#/customer/crm-services" data-offset="60" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Book Now</a>
-
-                                            </div>
-
+                                            <ul class="mt-3">
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.1,"animation": "slide-right"}'>Cases | Tickets</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.2,"animation": "slide-right"}'>Web to case from</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.3,"animation": "slide-right"}'>Approval process</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}'>Case escalation rules</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.5,"animation": "slide-right"}'>Assignment | Workflow</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.6,"animation": "slide-right"}'>Self Service User Portal</li>
+                                                <li class="mt-3" data-zanim-xs='{"delay":0.7,"animation": "slide-right"}'>Field | Scheduled Action</li>
+                                            </ul>
                                         </div>
                                     </div>
-
-
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 mt-6 mt-md-0">
-                                <div class="card pl-4 pt-3">
 
-                                    <div class="row">
-
-                                        <div class="col-lg-5 col-md-5 col-sm-8 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                                            <amp-img class="mb-3" src="assets/img/icons/package3.svg" alt="" width="120" height="120"></amp-img>
-                                            <div class="overflow-hidden">
-                                                <h2 data-zanim-xs='{"delay":0.1}'>Advanced Package</h2>
-                                            </div>
-
-                                            <div class="overflow-hidden">
-                                                <h4 class="text-serif font-weight-light font-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>starting at</h4>
-                                            </div>
-                                            <div class="overflow-hidden">
-                                                <h4 class="mb-4" data-zanim-xs='{"delay":0.3}'> 35$ (USD) Per Hour </h4>
-                                            </div>
-
-
-
-
-
-                                        </div>
-
-                                        <div class="col-lg-7 col-md-7 col-sm-8  mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-
-
-
-                                            <div class="oveflow-hidden">
-                                                <div class="row mx-auto">
-                                                    <div class="col-lg-12 col-sm-8 mx-auto">
-                                                        <ul class="style-check pl-0" data-zanim-xs='{"delay":0.4}'>
-                                                            <li class="d-inline-block d-md-block">‌Inventory Management</li>
-                                                            <li class="d-inline-block d-md-block lu">Process Management</li>
-                                                            <li class="d-inline-block d-md-block">Workflow Management</li>
-                                                            <li class="d-inline-block d-md-block">Data Security Polices</li>
-                                                            <li class="d-inline-block d-md-block">Custom Analytics & Reports</li>
-                                                            <li class="d-inline-block d-md-block">Machine Learning</li>
-                                                            <li class="d-inline-block d-md-block">3rd party API Integrations</li>
-                                                            <li class="d-inline-block d-md-block">Advanced Custom Customization</li>
-
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <a class="btn btn-danger  text-center mx-auto btn-sm mr-2 my-2 " href="https://sixtyonesteps.zohobookings.com/#/customer/crm-services" data-offset="60" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Book Now</a>
-
-
-                                            </div>
-
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+
             </div>
-        </section>
+       
+
+
+            <section>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+
+
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 mb-7 text-center">
+                                    <h2 class="text-center  mb-3">Find the Right Package</h2>
+                                    <p class="text-500 font-italic">Sixty One Steps gives you the best output at the lowest investment and fills all your needs. Choose from the pricing plans that suits you best.</p>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <div class="card pl-4 pt-3">
 
 
 
-        <div class="container">
 
-            <div class="col-lg-12 ">
-                <div class="col-lg-12 mb-5  text-center">
-                    <h2 class="text-center">Our Implementations</h2>
+                                        <div class="row">
+                                            <div class=" col-lg-5 col-md-5 col-sm-8 mt-2 my-auto mt-md-0 mx-auto " data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                                <amp-img class="mb-3" src="assets/img/icons/package2.svg" alt="" width="120" height="120"></amp-img>
+                                                <div class="overflow-hidden">
+                                                    <h2 data-zanim-xs='{"delay":0.1}'>Starter Package</h2>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h4 class="text-serif font-weight-light font-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>starting at</h4>
+                                                </div>
+                                                <div class="overflow-hidden">
+
+                                                    <h4 class="mb-4" data-zanim-xs='{"delay":0.3}'> 15$ (USD) Per Hour </h4>
+                                                </div>
+                                            </div>
+
+                                            <div class=" col-lg-7 col-md-7 col-sm-8 mt-2  mt-md-0 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                                <div class="oveflow-hidden ">
+                                                    <div class="row mx-auto">
+                                                        <div class="col-lg-12 col-sm-8 mx-auto">
+                                                            <ul class="style-check pl-0 " data-zanim-xs='{"delay":0.4}'>
+                                                                <li class="d-inline-block d-md-block">Cloud & Mobile Application </li>
+                                                                <li class="d-inline-block d-md-block">Team Collaboration</li>
+                                                                <li class="d-inline-block d-md-block">Google Apps Integrations</li>
+                                                                <li class="d-inline-block d-md-block">Social Media Setup & Automation</li>
+                                                                <li class="d-inline-block d-md-block">Document Management & Sharing</li>
+                                                                <li class="d-inline-block d-md-block">Sales Process Setup & Automation</li>
+                                                                <li class="d-inline-block d-md-block">Support Process Automation</li>
+                                                                <li class="d-inline-block d-md-block">Marketing Process Automation</li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <a class="btn btn-danger  text-center mx-auto btn-sm mr-2 my-2 " href="https://sixtyonesteps.zohobookings.com/#/customer/crm-services" data-offset="60" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Book Now</a>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 mt-6 mt-md-0">
+                                    <div class="card pl-4 pt-3">
+
+                                        <div class="row">
+
+                                            <div class="col-lg-5 col-md-5 col-sm-8 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                                                <amp-img class="mb-3" src="assets/img/icons/package3.svg" alt="" width="120" height="120"></amp-img>
+                                                <div class="overflow-hidden">
+                                                    <h2 data-zanim-xs='{"delay":0.1}'>Advanced Package</h2>
+                                                </div>
+
+                                                <div class="overflow-hidden">
+                                                    <h4 class="text-serif font-weight-light font-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>starting at</h4>
+                                                </div>
+                                                <div class="overflow-hidden">
+                                                    <h4 class="mb-4" data-zanim-xs='{"delay":0.3}'> 35$ (USD) Per Hour </h4>
+                                                </div>
+
+
+
+
+
+                                            </div>
+
+                                            <div class="col-lg-7 col-md-7 col-sm-8  mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+
+
+
+                                                <div class="oveflow-hidden">
+                                                    <div class="row mx-auto">
+                                                        <div class="col-lg-12 col-sm-8 mx-auto">
+                                                            <ul class="style-check pl-0" data-zanim-xs='{"delay":0.4}'>
+                                                                <li class="d-inline-block d-md-block">‌Inventory Management</li>
+                                                                <li class="d-inline-block d-md-block lu">Process Management</li>
+                                                                <li class="d-inline-block d-md-block">Workflow Management</li>
+                                                                <li class="d-inline-block d-md-block">Data Security Polices</li>
+                                                                <li class="d-inline-block d-md-block">Custom Analytics & Reports</li>
+                                                                <li class="d-inline-block d-md-block">Machine Learning</li>
+                                                                <li class="d-inline-block d-md-block">3rd party API Integrations</li>
+                                                                <li class="d-inline-block d-md-block">Advanced Custom Customization</li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <a class="btn btn-danger  text-center mx-auto btn-sm mr-2 my-2 " href="https://sixtyonesteps.zohobookings.com/#/customer/crm-services" data-offset="60" data-zanim-xs='{"delay":0.4,"animation": "slide-down"}' data-zanim-trigger="scroll">Book Now</a>
+
+
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="row" style="margin-top: 50px">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <a class="overflow-hidden" aria-label="sensotech" href="sensotech.html">
-                                <amp-img class="rounded img-fluid" layout="responsive" width="550" height="350" src="assets/img/CRM/Load-cell-sensotech.webp" alt="image">
-                                    <amp-img fallback layout="responsive" src="assets/img/CRM/Load-cell-sensotech.jpg" class="rounded img-fluid" width="550" height="350" alt="image"></amp-img>
-                                </amp-img>
+           </section>
 
-                            </a>
-                            <div class="card-body" style="text-align: center">
 
-                                <h4 class="mt-2 text-center">Sensotech India</h4>
-                                <p class="mt-3 text-lg-left" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}' data-zanim-trigger="scroll">Sensotech is a manufacturer of a wide range of high precision load cells for various industrial applications ...</p>
 
-                                <a class="btn btn-danger btn-xs pl-0 text-center mt-3" href="sensotech.html" data-zanim-xs='{"delay":0.9,"animation": "slide-down"}' data-zanim-trigger="scroll"><span class="ml-2">read more</span><span class="d-inline-block ml-1">&xrarr;</span></a >
+            <div class="container">
+
+                <div class="col-lg-12 ">
+                    <div class="col-lg-12 mb-5  text-center">
+                        <h2 class="text-center">Our Implementations</h2>
+                    </div>
+                    <div class="row" style="margin-top: 50px">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <a class="overflow-hidden" aria-label="sensotech" href="sensotech.html">
+                                    <amp-img class="rounded img-fluid" layout="responsive" width="550" height="350" src="assets/img/CRM/Load-cell-sensotech.webp" alt="image">
+                                        <amp-img fallback layout="responsive" src="assets/img/CRM/Load-cell-sensotech.jpg" class="rounded img-fluid" width="550" height="350" alt="image"></amp-img>
+                                    </amp-img>
+
+                                </a>
+                                <div class="card-body" style="text-align: center">
+
+                                    <h4 class="mt-2 text-center">Sensotech India</h4>
+                                    <p class="mt-3 text-lg-left" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}' data-zanim-trigger="scroll">Sensotech is a manufacturer of a wide range of high precision load cells for various industrial applications ...</p>
+
+                                    <a class="btn btn-danger btn-xs pl-0 text-center mt-3" href="sensotech.html" data-zanim-xs='{"delay":0.9,"animation": "slide-down"}' data-zanim-trigger="scroll"><span class="ml-2">read more</span><span class="d-inline-block ml-1">&xrarr;</span></a >
                     </div>
 
                   </div>
@@ -1436,10 +761,10 @@
                          <amp-img class="rounded img-fluid" layout="responsive" width="550" height="350" src="assets/img/CRM/Slab-space-india.webp" alt="image">
                                     <amp-img fallback layout="responsive" src="assets/img/CRM/Slab-space-india.jpg"  class="rounded img-fluid" width="550" height="350"  alt="image"></amp-img></amp-img>
                     </a>
-                                <div class="card-body" style="text-align: center">
-                                    <h4 class="mt-2 text-center">Slab Space India & Co</h4>
-                                    <p class="mt-3 text-lg-left" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}' data-zanim-trigger="scroll">Slab Space India and Co are quarry owners, stone processors and exporters of quality granite blocks ...</p>
-                                    <a class="btn btn-danger btn-xs pl-0 text-center mt-3" href="slab-space-india-crm.html" data-zanim-xs='{"delay":0.9,"animation": "slide-down"}' data-zanim-trigger="scroll"><span class="ml-2">read more</span><span class="d-inline-block ml-1">&xrarr;</span></a >
+                                    <div class="card-body" style="text-align: center">
+                                        <h4 class="mt-2 text-center">Slab Space India & Co</h4>
+                                        <p class="mt-3 text-lg-left" data-zanim-xs='{"delay":0.4,"animation": "slide-right"}' data-zanim-trigger="scroll">Slab Space India and Co are quarry owners, stone processors and exporters of quality granite blocks ...</p>
+                                        <a class="btn btn-danger btn-xs pl-0 text-center mt-3" href="slab-space-india-crm.html" data-zanim-xs='{"delay":0.9,"animation": "slide-down"}' data-zanim-trigger="scroll"><span class="ml-2">read more</span><span class="d-inline-block ml-1">&xrarr;</span></a >
                     </div>
                       </div>
                     </div>
@@ -1562,88 +887,88 @@
 
 
                     <a href='javascript:;' onclick='reloadImg()'>Reload</a>
-                                    <br>
-                                    <div class="mx-auto text-center">
-                                        <button class="btn btn-md btn-dark mt-2 mx-auto text-center" type="submit">Send<span class="fa fa-paper-plane ml-1"></span></button>
+                                        <br>
+                                        <div class="mx-auto text-center">
+                                            <button class="btn btn-md btn-dark mt-2 mx-auto text-center" type="submit">Send<span class="fa fa-paper-plane ml-1"></span></button>
 
-                                        <button class="close btn btn-md btn-light" type="close">
+                                            <button class="close btn btn-md btn-light" type="close">
                     <!-- <span class="font-weight-light" aria-hidden="true">&times;</span> -->
                 </button>
-                                    </div>
+                                        </div>
 
-                                    <div class="zform-feedback mt-2"></div>
-                                    </form>
+                                        <div class="zform-feedback mt-2"></div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
+
+
+
+
+
                         </div>
-
-
-
-
-
-                    </div>
-                    <!--
+                        <!--
                         <div class="modal-footer">
 
 
                         </div>
                     -->
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
-        </div>
+            </div>
+            </div>
+            </div>
 
 
-        <div class="container mb-5 mt-5">
+            <div class="container mb-5 mt-5">
 
-            <!-- Paging v1 Section -->
-            <nav class="clearfix mx-auto">
-                <div class="row no-gutters mx-auto">
+                <!-- Paging v1 Section -->
+                <nav class="clearfix mx-auto">
+                    <div class="row no-gutters mx-auto">
 
 
 
-                    <a class="col-sm-8 col-lg-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="pay-per-click-advertisement.html" style=" background-color: #1e2022; text-decoration: none;">
-                        <!-- Paging v1 -->
-                        <div class="px-7 ">
-                            <span class="" style="color: #ea9a00;">Prev</span>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <span class="fas fa-arrow-left u-paging-modern__arrow-icon-prev" style="color: #ea9a00;"></span>
-                                <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">PPC Services</h4>
+                        <a class="col-sm-8 col-lg-4 order-sm-1 u-paging-modern  space-1 space-sm-1 text-right mx-auto mt-2" href="pay-per-click-advertisement.html" style=" background-color: #1e2022; text-decoration: none;">
+                            <!-- Paging v1 -->
+                            <div class="px-7 ">
+                                <span class="" style="color: #ea9a00;">Prev</span>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="fas fa-arrow-left u-paging-modern__arrow-icon-prev" style="color: #ea9a00;"></span>
+                                    <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">PPC Services</h4>
+                                </div>
                             </div>
+                            <!-- End Paging v1 -->
+                        </a>
+
+                        <div class="z-index-0 col-sm-8 col-lg-3 order-sm-2 u-paging-modern-view-all space-1 space-sm-1 mx-auto mt-2" data-toggle="modal" data-target="#exampleModal" style="text-decoration: none; background-color: #ea9a00; cursor: pointer;">
+                            <!-- data-toggle="modal" data-target="#exampleFadeInModal" -->
+                            <!-- Paging v1 -->
+                            <span class="fas fa-envelope fa-2x text-white"></span>
+
+                            <h4 class="mt-2" style="text-decoration: none; color: black;"> Get a Quote </h4>
+
+
+
                         </div>
-                        <!-- End Paging v1 -->
-                    </a>
 
-                    <div class="z-index-0 col-sm-8 col-lg-3 order-sm-2 u-paging-modern-view-all space-1 space-sm-1 mx-auto mt-2" data-toggle="modal" data-target="#exampleModal" style="text-decoration: none; background-color: #ea9a00; cursor: pointer;">
-                        <!-- data-toggle="modal" data-target="#exampleFadeInModal" -->
-                        <!-- Paging v1 -->
-                        <span class="fas fa-envelope fa-2x text-white"></span>
-
-                        <h4 class="mt-2" style="text-decoration: none; color: black;"> Get a Quote </h4>
-
+                        <a class="col-sm-8 col-lg-4  order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="hrms-services.html" style=" background-color: #1e2022; text-decoration: none;">
+                            <!-- Paging v1 -->
+                            <div class="px-7">
+                                <span class="" style="color: #ea9a00;">Next</span>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">HRMS Services</h4>
+                                    <span class="fas fa-arrow-right u-paging-modern__arrow-icon-next" style="color: #ea9a00;"></span>
+                                </div>
+                            </div>
+                            <!-- End Paging v1 -->
+                        </a>
 
 
                     </div>
-
-                    <a class="col-sm-8 col-lg-4  order-sm-3 u-paging-modern  space-1 space-sm-1 mx-auto mt-2" href="hrms-services.html" style=" background-color: #1e2022; text-decoration: none;">
-                        <!-- Paging v1 -->
-                        <div class="px-7">
-                            <span class="" style="color: #ea9a00;">Next</span>
-                            <div class="d-flex justify-content-between align-items-center mt-3">
-                                <h4 class="text-white font-weight-semi-bold mb-0" style="text-decoration: none;">HRMS Services</h4>
-                                <span class="fas fa-arrow-right u-paging-modern__arrow-icon-next" style="color: #ea9a00;"></span>
-                            </div>
-                        </div>
-                        <!-- End Paging v1 -->
-                    </a>
-
-
-                </div>
-            </nav>
-        </div>
-        <!-- End Paging v1 Section -->
+                </nav>
+            </div>
+            <!-- End Paging v1 Section -->
 
 
 
@@ -1767,9 +1092,8 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>     
-    <script src="dist/js/crm-services.js" defer></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="dist/js/crm.js" defer></script>
 
     <script defer>
         var $zoho = $zoho || {};
@@ -1788,6 +1112,7 @@
         t.parentNode.insertBefore(s, t);
         d.write("<div id='zsiqwidget'></div>");
     </script>
+    
 
     <script>
         if ('serviceWorker' in navigator) {
