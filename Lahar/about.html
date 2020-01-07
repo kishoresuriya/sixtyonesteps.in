@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lahar</title>
+        <meta name="description" content="Lahar Imports">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
+     <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="robots" content="all,follow">
+    <!-- Price Slider Stylesheets -->
+    <link defer rel="stylesheet" href="dist/css/about.css" >
+    <link rel="stylesheet" href="fonts/hkgrotesk/stylesheet.css" media="none" onload="if(media!='all')media='all'">
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/regular.css" integrity="sha384-avJt9MoJH2rB4PKRsJRHZv7yiFZn8LrnXuzvmZoD3fh1aL6aM6s0BBcnCvBe6XSD" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
+    <link rel="preconnect" href="https://demo.bootstrapious.com">
+  <style>
+
+
+
+
+    /* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnohkk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojUk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnojEk7yRZrPJ-M.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Playfair Display Italic'), local('PlayfairDisplay-Italic'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWEe5j5hNKe1_w.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWAe5j5hNKe1_w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  .h3txt {
+ 
+ background: -webkit-linear-gradient(#0f0, #526b2d);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+@media  screen and (max-width: 768px){
+  .mds{
+    margin-top: 80px;
+  }
+}
+
+@media  screen and (min-width: 992px){
+  .lgs{
+    margin-top: -120px;
+  }
+}
+
+
+
+
+.zoom1 {
+  
+  
+  transition: transform .2s; /* Animation */
+  
+  margin: 0 auto;
+}
+
+.zoom1:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+
+  </style>
+
+<link rel="manifest" href="manifest.json">
+
+  </head>
+  <body>
+    <header class="header header-absolute">
+      
+
+      <!-- Top Bar-->
+      <div class="top-bar">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-center">
+            <div class="col-sm-7 d-none d-sm-block">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item pr-3 mr-0">
+                  <svg class="svg-icon mr-2">
+                    <use xlink:href="#calls-1"> </use>
+                  </svg>+ 13129785743
+                </li>
+                <li class="list-inline-item px-3 border-left d-none d-lg-inline-block">Free shipping on orders over $300</li>
+              </ul>
+            </div>
+            <div class="col-sm-5 d-flex justify-content-end">
+              <!-- Language Dropdown-->
+              <div class="dropdown border-right px-3"><a id="langsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle topbar-link"><img src="img/united-kingdom.svg" alt="english" class="topbar-flag">English</a>
+                <div aria-labelledby="langsDropdown" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-sm"><img src="img/germany.svg" alt="german" class="topbar-flag">German</a><a href="#" class="dropdown-item text-sm"> <img src="img/france.svg" alt="french" class="topbar-flag">French</a></div>
+              </div>
+              <!-- Currency Dropdown-->
+              <div class="dropdown pl-3 ml-0"><a id="currencyDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle topbar-link">USD</a>
+                <div aria-labelledby="currencyDropdown" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-sm">EUR</a><a href="#" class="dropdown-item text-sm"> GBP</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Bar End-->
+      
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg bg-transparent navbar-sticky navbar-light navbar-airy bg-fixed-white">
+        <div class="container-fluid">  
+          <!-- Navbar Header  --><a href="index.html" class="navbar-brand">
+           <h3 style="color:#505357;"> LAHAR </h3>  </a>
+          <button type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+          <!-- Navbar Collapse -->
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item dropdown"><a  href="index.html"  class="nav-link  ">
+                   
+                  Home</a>
+                
+              </li>
+              <li class="nav-item"><a href="about.html" class="nav-link active  ">About</a>
+              </li>
+              
+              <li class="nav-item  position-static"><a href="faq.html"  class="nav-link ">F.A.Q.s</a>
+                
+              </li>
+             
+              
+              <li class="nav-item "><a  href="whyus.html"  class="nav-link ">Why Us?</a>
+                
+              </li>
+             
+              <li class="nav-item"><a href="booking.html" class="nav-link ">Booking</a>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <!-- /Navbar -->
+      
+     
+      
+    </header>
+    <!-- Hero Section-->
+   
+
+<!--
+    <section class="mh-full-screen light-overlay py-7 d-flex align-items-center justify-content-center"><img src="img/Lahar/LAHAR.png" alt="" class="bg-image">
+      <div class="overlay-content w-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 text-white">
+              <h6 class="text-uppercase text-black letter-spacing-5 mb-3" style="color: black;"> About us</h6>
+              <h1 class="display-3 font-weight-bold text-shadow mb-5 h3txt">We are Lahar</h1>
+              <p class="text-lg" style="color: black;">Lahar’s imported textile products will not only be environmentally conscious, but also ethic-centric. We make sure all parties involved are registered with Fair-Trade, GOTS & use Organic Cotton. At Lahar we believe that fashion and ethics don’t have to be mutually exclusive, which inspired our motto “Style with a Conscience!”.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+
+
+    <section>
+
+
+       <div class="container-fluid mds">
+
+         <div class="row">
+          <div class="col-lg-9 col-xl-9 col-md-9 col-sm-12 mx-auto">
+          
+
+            
+
+            <div class="mb-5">
+              <a href="about.html"><img src="img/Lahar/LAHAR.png" alt="" class="img-fluid"> </a>
+
+              <h6 class="text-uppercase text-center text-muted letter-spacing-5 lgs mb-1">ABOUT US
+</h6>
+              <h2 class="mb-4 h3txt text-center">We are Lahar</h2>
+              <p class="text-lg text-muted" style="text-align: justify;">Lahar’s imported textile products will not only be environmentally conscious, but also ethic-centric. We make sure all parties involved are registered with Fair-Trade, GOTS & use Organic Cotton. At Lahar we believe that fashion and ethics don’t have to be mutually exclusive, which inspired our motto “Style with a Conscience!”.</p>
+            </div>
+
+          </div>
+
+    
+         
+        </div>
+      </div>
+    
+
+      
+      <hr class="mb-5">
+
+      <div class="container-fluid" style="margin-top: 100px;">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-8 p-lg-0 mx-auto about-image-column">
+             <a href="https://www.fairtradecertified.org/" target="blank"><img src="img/Lahar/Fairtrade-Logo.png" alt="" class="img-fluid zoom1"> </a>
+            
+            
+
+
+             <div class="about-text mx-auto">
+              <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">LAHAR’S VISION</h6>
+              <h3 class="mb-4 h3txt">Connecting cultures, </h3> <h3 class="mb-4 h3txt" style="margin-top: -20px;">Flourishing together!</h3>
+              <p class="text-lg text-muted">We want to connect various cultures and share their rich heritage with one another across the globe. Lahar trades and conducts business across countries all over the world. At Lahar we are set on making our benchmark as not only an ethic-centric business but also an environmentally conscious one.</p>
+              <a href="https://www.fairtradecertified.org/" target="blank" class="btn btn-md btn-outline-dark mx-auto text-center"> Know More </a>
+            </div>
+
+            </div>
+
+          <div class="col-xl-6 col-lg-6 col-md-8 mx-auto about-image-column">
+            
+            <a href="https://www.global-standard.org/" target="blank">
+              <img src="img/Lahar/GOTS-Logo.png" alt="" class="img-fluid zoom1">
+            </a>
+
+            <div class="about-text mx-auto mt-2">
+              <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">TEXTILE FOCUS</h6>
+              <h3 class="mb-4 h3txt">Bringing more </h3> <h3 class="mb-4 h3txt" style="margin-top: -20px;"> Ethic/Eco-centric fashion</h3>
+              <p class="text-lg text-muted">As Lahar was born we did our research on what field we wanted to start with and textile was the obvious option for us thanks to our rich ancestral background in textiles. Moreover we recognized the need for more ethical and eco-conscious production of clothing.             </p>
+               <a href="https://www.global-standard.org/" target="blank" class="mx-auto text-center btn btn-md btn-outline-dark"> Know More </a>
+            </div>
+
+          </div>
+          
+        </div>
+       
+        <div class="row">
+
+            <div class="col-lg-6 p-lg-0 about-image-column"><img src="img/Lahar/CottonPlant.jpg" alt="" class="bg-image"></div>
+
+          <div class="col-lg-6 about-text-column bg-gray-100">
+            <div class="p-5">
+              <h6 class="text-uppercase text-muted letter-spacing-5 mb-1">LOW IMPACT</h6>
+              <h3 class="mb-4 h3txt">Sustainable Development Goals</h3>
+              <p class="text-lg text-muted">We at Lahar realized that knowledge is prevalent, but not enough companies follow ethical and eco-conscious production practices. We work with various textile suppliers ranging from materials to actual completed products. We try our level best to make sure all parties follow Organic, GOTS and fair trade regulations.           </p>
+              <a   href="faq.html" class="btn btn-md btn-outline-dark"> FAQ </a>
+            </div>
+          </div>
+
+         
+         
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <!-- Footer-->
+    <!-- Footer-->
+    <footer class="main-footer">
+      <!-- Services block-->
+      <div class="bg-gray-100 text-dark-700 py-6">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#delivery-time-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-uppercase">Free shipping &amp; return</h6>
+                <p class="text-muted font-weight-light text-sm mb-0">Free Shipping over $300</p>
+              </div>
+            </div>
+            <div class="col-lg-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#money-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-uppercase">Money back guarantee</h6>
+                <p class="text-muted font-weight-light text-sm mb-0">30 Days Money Back Guarantee</p>
+              </div>
+            </div>
+            <div class="col-lg-4 service-column">
+              <svg class="svg-icon service-icon">
+                <use xlink:href="#customer-support-1"> </use>
+              </svg>
+              <div class="service-text">
+                <h6 class="text-uppercase">001-312-978-5743</h6>
+                <p class="text-muted font-weight-light text-sm mb-0">Call for Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main block - menus, subscribe form-->
+      <div class="py-6 bg-gray-300 text-muted"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <div class="font-weight-bold text-uppercase text-lg  mb-3" style="color:#505357;">LAHAR<span class="text-primary">.</span></div>
+              <p>Style with a Conscience, where Ethics meet Fashion!.</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" target="_blank" title="twitter" class="text-muted text-hover-primary"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="facebook" class="text-muted text-hover-primary"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="instagram" class="text-muted text-hover-primary"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="pinterest" class="text-muted text-hover-primary"><i class="fab fa-pinterest"></i></a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" title="vimeo" class="text-muted text-hover-primary"><i class="fab fa-vimeo"></i></a></li>
+              </ul>
+            </div>
+         
+            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+              <h6 class="text-uppercase  mb-3" style="color:#505357;">Menu</h6>
+              <ul class="list-unstyled">
+                <li> <a href="index.html" class="text-muted text-uppercase">Home                    </a></li>
+                <li> <a href="about.html" class="text-muted text-uppercase">About                    </a></li>
+                <li> <a href="faq.html" class="text-muted text-uppercase">F.a.q.s                    </a></li>
+                <li> <a href="whyus.html" class="text-muted text-uppercase">Why us?                    </a></li>
+                <li> <a href="booking.html" class="text-muted text-uppercase">Booking                    </a></li>
+              </ul>
+            </div>
+            <div class="col-lg-5">
+              <h6 class="text-uppercase mb-3" style="color:#505357;">Offers & Discounts</h6>
+              <p class="mb-3"> Enter your email address to receive latest collections and discounts to your Inbox.</p>
+              <form action="#" id="newsletter-form">
+                <div class="input-group mb-3">
+                  <input type="email" placeholder="Your Email Address" aria-label="Your Email Address" class="form-control bg-transparent border-secondary border-right-0">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary border-left-0"> <i class="fa fa-paper-plane text-lg text-dark"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright section of the footer-->
+      <div class="py-4 font-weight-light bg-gray-800 text-gray-300">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left">
+              <p class="mb-md-0">&copy; 2020 Lahar.  All rights reserved.</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-md-right">
+                <li class="list-inline-item"><img src="img/visa.svg" alt="..." class="w-2rem"></li>
+                <li class="list-inline-item"><img src="img/mastercard.svg" alt="..." class="w-2rem"></li>
+                <li class="list-inline-item"><img src="img/paypal.svg" alt="..." class="w-2rem"></li>
+                <li class="list-inline-item"><img src="img/western-union.svg" alt="..." class="w-2rem"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer end-->
+    <div id="scrollTop"><i class="fa fa-long-arrow-alt-up"></i></div>
+    <!-- JavaScript files-->
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to Bootstrapious website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://demo.bootstrapious.com/sell/1-2-0/icons/orion-svg-sprite.svg'); 
+      
+    </script>
+    <!-- jQuery-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="dist/js/all.js" defer></script>
+   <script src="js/theme.js" defer></script>
+    <script>
+      var basePath = ''
+      
+    </script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').
+      then(function(registration) {
+          // Registration was successful``
+          console.log('ServiceWorker registration successful with scope: ',
+              registration.scope);
+      }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+      });
+  }
+</script>
+
+    
+  </body>
+</html>

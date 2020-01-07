@@ -1,0 +1,28 @@
+{
+  "author" : "Lahar",
+  "short_name": "Lahar",
+  "name": "Lahar",
+  "description" : "Lahar Imports.",
+  "icons": [
+  
+	{
+      "src": " img/Lahar/LAHAR-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+  
+	{
+      "src": " img/Lahar/LAHAR-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "manifest_version":1,
+  "start_url": "/index.html",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#3367D6",
+   "related_applications": [],
+    "prefer_related_applications": false
+}
